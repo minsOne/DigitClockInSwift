@@ -17,15 +17,15 @@ class SettingTableViewController: UITableViewController {
 
 // MARK: View Life Cycle
 extension SettingTableViewController {
+  override func loadView() {
+    super.loadView()
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    
     btnDone = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: Selector("pressedDoneBtn:"))
-    
     self.navigationItem.setRightBarButtonItem(btnDone, animated: true)
-    
     self.title = "Digit Clock"
-
   }
 }
 // MARK: Memory Handling

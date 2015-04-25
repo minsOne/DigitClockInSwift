@@ -435,9 +435,12 @@
                                     <constraint firstAttribute="width" constant="24" id="Mi3-ZL-YOk"/>
                                     <constraint firstAttribute="height" constant="24" id="kkA-8X-KIt"/>
                                 </constraints>
-                                <state key="normal" image="rotation">
+                                <state key="normal" image="rotation_unlock">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="pressedRotationBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BDV-lL-9xX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -635,14 +638,14 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outletCollection property="themeButtons" destination="Yof-c0-1Tm" id="y0c-Vf-Rdc"/>
-                                    <outletCollection property="themeButtons" destination="wL2-9j-9Q1" id="AyC-xw-2RZ"/>
-                                    <outletCollection property="themeButtons" destination="yL9-Uo-9oT" id="U9b-9P-r6p"/>
-                                    <outletCollection property="themeButtons" destination="y7t-6F-WSD" id="2Nb-Oq-Yhu"/>
-                                    <outletCollection property="themeButtons" destination="fWo-T9-teT" id="eoK-2M-vAg"/>
-                                    <outletCollection property="themeButtons" destination="x1f-3D-6o1" id="oN0-DO-Hxh"/>
-                                    <outletCollection property="themeButtons" destination="BJF-Kz-nt5" id="zOo-d6-1o2"/>
-                                    <outletCollection property="themeButtons" destination="Tiw-Kj-4uW" id="YWw-Sy-odP"/>
+                                    <outletCollection property="themeButtons" destination="Yof-c0-1Tm" collectionClass="NSMutableArray" id="y0c-Vf-Rdc"/>
+                                    <outletCollection property="themeButtons" destination="wL2-9j-9Q1" collectionClass="NSMutableArray" id="AyC-xw-2RZ"/>
+                                    <outletCollection property="themeButtons" destination="yL9-Uo-9oT" collectionClass="NSMutableArray" id="U9b-9P-r6p"/>
+                                    <outletCollection property="themeButtons" destination="y7t-6F-WSD" collectionClass="NSMutableArray" id="2Nb-Oq-Yhu"/>
+                                    <outletCollection property="themeButtons" destination="fWo-T9-teT" collectionClass="NSMutableArray" id="eoK-2M-vAg"/>
+                                    <outletCollection property="themeButtons" destination="x1f-3D-6o1" collectionClass="NSMutableArray" id="oN0-DO-Hxh"/>
+                                    <outletCollection property="themeButtons" destination="BJF-Kz-nt5" collectionClass="NSMutableArray" id="zOo-d6-1o2"/>
+                                    <outletCollection property="themeButtons" destination="Tiw-Kj-4uW" collectionClass="NSMutableArray" id="YWw-Sy-odP"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -676,7 +679,7 @@
     </scenes>
     <resources>
         <image name="menu_settings_bt" width="24" height="24"/>
-        <image name="rotation" width="24" height="24"/>
+        <image name="rotation_unlock" width="24" height="24"/>
         <image name="theme1" width="30" height="30"/>
     </resources>
 </document>

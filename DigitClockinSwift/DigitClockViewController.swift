@@ -9,6 +9,8 @@
 import UIKit
 
 let digitName = "Digits"
+let rotation_lock = "rotation_lock"
+let rotation_unlock = "rotation_unlock"
 
 class DigitClockViewController: UIViewController {
   
@@ -24,6 +26,14 @@ class DigitClockViewController: UIViewController {
   @IBOutlet weak var rotationButton: UIButton!
   
   weak var timer: NSTimer?
+  
+  var isRotate: Bool = true {
+    didSet {
+      dispatch_async(dispatch_get_main_queue(), { () -> Void in
+        self.rotationButton.imageView?.image = isRotate ? UIImage(named: rotation_unlock) : UIImage(named: rotation_lock)
+      })
+    }
+  }
   
   deinit {
     self.offTickTimer()
@@ -45,23 +55,23 @@ extension DigitClockViewController {
     return true
   }
   override func shouldAutorotate() -> Bool {
-    return true
+    return isRotate
   }
   
   
-  
   override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+    
     if UIDevice.currentDevice().orientation.isLandscape.boolValue {
       println("Now Device Orientation is Landscape")
-//      dispatch_async(dispatch_get_main_queue(), { () -> Void in
-//        self.rotationButton.alpha = 1.0
-//      })
     } else {
       println("Now Device Orientation is Portrait")
-//      dispatch_async(dispatch_get_main_queue(), { () -> Void in
-//        self.rotationButton.alpha = 0.0
-//      })
     }
+    
+    coordinator.animateAlongsideTransition({ (context: UIViewControllerTransitionCoordinatorContext!) -> Void in
+      
+      }, completion: { (context: UIViewControllerTransitionCoordinatorContext!) -> Void in
+      println("Rotation is Completion")
+    })
   }
 }
 
@@ -97,6 +107,11 @@ extension DigitClockViewController {
   }
   func initRotationButton() {
     self.rotationButton.alpha = 0.0
+  }
+  
+  @IBAction func pressedRotationBtn(sender: UIButton) {
+    println(__FUNCTION__)
+    isRotate = !isRotate
   }
   
   private func setDigitImageLayer(xPosition: Int, forView view: UIImageView) {
