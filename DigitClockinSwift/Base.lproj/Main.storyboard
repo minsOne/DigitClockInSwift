@@ -20,8 +20,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ilc-ew-xTq" userLabel="WeekView">
                                 <rect key="frame" x="36" y="20" width="528" height="80"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SUN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EoL-Pw-yJH">
-                                        <rect key="frame" x="8" y="29" width="66" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EoL-Pw-yJH">
+                                        <rect key="frame" x="8" y="15" width="66" height="50"/>
                                         <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -32,8 +32,8 @@
                                             <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="20"/>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="MON" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPr-xV-sRc">
-                                        <rect key="frame" x="82" y="29" width="67" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MON" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPr-xV-sRc">
+                                        <rect key="frame" x="82" y="15" width="67" height="50"/>
                                         <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -44,8 +44,8 @@
                                             <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="20"/>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TUE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7M-l9-qK5">
-                                        <rect key="frame" x="157" y="29" width="66" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TUE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7M-l9-qK5">
+                                        <rect key="frame" x="157" y="15" width="66" height="50"/>
                                         <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -56,8 +56,8 @@
                                             <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="20"/>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="WED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hU5-3d-lVL">
-                                        <rect key="frame" x="231" y="29" width="66" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hU5-3d-lVL">
+                                        <rect key="frame" x="231" y="15" width="66" height="50"/>
                                         <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -68,8 +68,8 @@
                                             <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="20"/>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="THU" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5DO-x0-FBm">
-                                        <rect key="frame" x="305" y="29" width="66" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THU" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5DO-x0-FBm">
+                                        <rect key="frame" x="305" y="15" width="66" height="50"/>
                                         <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -80,8 +80,8 @@
                                             <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="20"/>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="FRI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYP-0B-qsl">
-                                        <rect key="frame" x="379" y="29" width="67" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FRI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYP-0B-qsl">
+                                        <rect key="frame" x="379" y="15" width="67" height="50"/>
                                         <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -92,8 +92,8 @@
                                             <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="20"/>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SAT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3P-cV-njY">
-                                        <rect key="frame" x="454" y="29" width="66" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3P-cV-njY">
+                                        <rect key="frame" x="454" y="15" width="66" height="50"/>
                                         <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -178,11 +178,11 @@
                                     </constraint>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gZR-W4-83p" userLabel="SpaceView">
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gZR-W4-83p" userLabel="SpaceView">
                                 <rect key="frame" x="0.0" y="540" width="600" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k90-Bf-E5B" userLabel="SettingVCButton">
-                                        <rect key="frame" x="556" y="16" width="44" height="44"/>
+                                        <rect key="frame" x="556" y="8" width="44" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="4Tg-He-Sg8"/>
                                             <constraint firstAttribute="width" constant="44" id="RwP-zC-AKz"/>
@@ -196,40 +196,68 @@
                                             </segue>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tx-bA-b71" userLabel="RotationButton">
+                                        <rect key="frame" x="504" y="8" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="Mi3-ZL-YOk"/>
+                                            <constraint firstAttribute="height" constant="24" id="kkA-8X-KIt"/>
+                                        </constraints>
+                                        <state key="normal" image="rotation_unlock">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Mi3-ZL-YOk"/>
+                                                <exclude reference="kkA-8X-KIt"/>
+                                            </mask>
+                                        </variation>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="k90-Bf-E5B" secondAttribute="trailing" id="2S8-vD-p2Y"/>
                                     <constraint firstAttribute="bottom" secondItem="k90-Bf-E5B" secondAttribute="bottom" id="Box-FB-RHg"/>
+                                    <constraint firstItem="4tx-bA-b71" firstAttribute="height" secondItem="k90-Bf-E5B" secondAttribute="height" id="RHb-Ra-ta9"/>
+                                    <constraint firstAttribute="centerY" secondItem="4tx-bA-b71" secondAttribute="centerY" id="XMj-Yn-jfM"/>
+                                    <constraint firstAttribute="centerY" secondItem="k90-Bf-E5B" secondAttribute="centerY" id="b7R-ac-VbQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="4tx-bA-b71" secondAttribute="bottom" id="cmo-eV-tb1"/>
                                     <constraint firstAttribute="height" constant="60" id="jTv-8w-44B"/>
+                                    <constraint firstItem="4tx-bA-b71" firstAttribute="width" secondItem="k90-Bf-E5B" secondAttribute="width" id="pqI-rS-NcP"/>
+                                    <constraint firstItem="k90-Bf-E5B" firstAttribute="leading" secondItem="4tx-bA-b71" secondAttribute="trailing" constant="8" id="xnl-Jh-YI6"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="cmo-eV-tb1"/>
+                                        <exclude reference="Box-FB-RHg"/>
+                                    </mask>
+                                </variation>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0jN-bm-IfM" userLabel="TimeView">
-                                <rect key="frame" x="36" y="140" width="528" height="300"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0jN-bm-IfM" userLabel="TimeView">
+                                <rect key="frame" x="36" y="120" width="528" height="320"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sZb-U7-gmF" userLabel="hour1">
-                                        <rect key="frame" x="0.0" y="0.0" width="63" height="300"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sZb-U7-gmF" userLabel="hour1">
+                                        <rect key="frame" x="0.0" y="0.0" width="63" height="320"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xvw-5T-Qja" userLabel="hour2">
-                                        <rect key="frame" x="67" y="0.0" width="62" height="300"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xvw-5T-Qja" userLabel="hour2">
+                                        <rect key="frame" x="67" y="0.0" width="62" height="320"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KUs-QK-7Ba" userLabel="colon1">
-                                        <rect key="frame" x="133" y="0.0" width="63" height="300"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KUs-QK-7Ba" userLabel="colon1">
+                                        <rect key="frame" x="133" y="0.0" width="63" height="320"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="efM-DI-kxN" userLabel="minute1">
-                                        <rect key="frame" x="200" y="0.0" width="62" height="300"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="efM-DI-kxN" userLabel="minute1">
+                                        <rect key="frame" x="200" y="0.0" width="62" height="320"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CGn-5B-Hh0" userLabel="minute2">
-                                        <rect key="frame" x="266" y="0.0" width="63" height="300"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CGn-5B-Hh0" userLabel="minute2">
+                                        <rect key="frame" x="266" y="0.0" width="63" height="320"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1hH-gJ-iiP" userLabel="colon2">
-                                        <rect key="frame" x="333" y="0.0" width="62" height="300"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1hH-gJ-iiP" userLabel="colon2">
+                                        <rect key="frame" x="333" y="0.0" width="62" height="320"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tUc-JM-YRV" userLabel="second1">
-                                        <rect key="frame" x="399" y="0.0" width="63" height="300"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tUc-JM-YRV" userLabel="second1">
+                                        <rect key="frame" x="399" y="0.0" width="63" height="320"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oDz-Bw-IE0" userLabel="second2">
-                                        <rect key="frame" x="466" y="0.0" width="62" height="300"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oDz-Bw-IE0" userLabel="second2">
+                                        <rect key="frame" x="466" y="0.0" width="62" height="320"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -429,23 +457,9 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tx-bA-b71" userLabel="RotationButton">
-                                <rect key="frame" x="571" y="288" width="24" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="24" id="Mi3-ZL-YOk"/>
-                                    <constraint firstAttribute="height" constant="24" id="kkA-8X-KIt"/>
-                                </constraints>
-                                <state key="normal" image="rotation_unlock">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="pressedRotationBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BDV-lL-9xX"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="4tx-bA-b71" secondAttribute="centerY" id="3d4-8O-HEP"/>
                             <constraint firstItem="gZR-W4-83p" firstAttribute="top" secondItem="0jN-bm-IfM" secondAttribute="bottom" constant="100" id="86d-R9-o7s">
                                 <variation key="heightClass=compact" constant="20"/>
                                 <variation key="heightClass=regular-widthClass=compact" constant="20"/>
@@ -466,7 +480,6 @@
                             </constraint>
                             <constraint firstAttribute="centerY" secondItem="0jN-bm-IfM" secondAttribute="centerY" id="QPW-nL-8ku"/>
                             <constraint firstAttribute="centerX" secondItem="Ilc-ew-xTq" secondAttribute="centerX" id="Z25-Qy-vTg"/>
-                            <constraint firstAttribute="trailing" secondItem="4tx-bA-b71" secondAttribute="trailing" constant="5" id="Z87-mU-xUq"/>
                             <constraint firstAttribute="bottom" secondItem="gZR-W4-83p" secondAttribute="bottom" id="fKQ-Ee-6xc"/>
                             <constraint firstAttribute="trailing" secondItem="gZR-W4-83p" secondAttribute="trailing" id="gF2-uC-ple"/>
                             <constraint firstItem="Ilc-ew-xTq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="hTM-N7-EZb"/>

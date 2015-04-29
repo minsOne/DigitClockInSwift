@@ -23,9 +23,16 @@ extension SettingTableViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    btnDone = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: Selector("pressedDoneBtn:"))
-    self.navigationItem.setRightBarButtonItem(btnDone, animated: true)
     self.title = "Digit Clock"
+
+    if self.respondsToSelector(Selector("pressedDoneBtn:")) {
+      btnDone = UIBarButtonItem(
+        barButtonSystemItem: .Done,
+        target: self,
+        action: Selector("pressedDoneBtn:"))
+
+      self.navigationItem.setRightBarButtonItem(btnDone, animated: true)
+    }
   }
 }
 // MARK: Memory Handling
@@ -71,7 +78,6 @@ extension SettingTableViewController {
 
 extension SettingTableViewController {
   func pressedDoneBtn(sender: UIBarButtonItem) {
-//    self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
     self.dismissViewControllerAnimated(true, completion: nil)
   }
 }

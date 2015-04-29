@@ -15,6 +15,7 @@
 		CB999B1B1AE78E6300CDB674 /* DigitClockinSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB999B1A1AE78E6300CDB674 /* DigitClockinSwiftTests.swift */; };
 		CB999B2B1AEB5AAA00CDB674 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB999B2A1AEB5AAA00CDB674 /* SettingTableViewController.swift */; };
 		CB999B2F1AEB713600CDB674 /* ThemeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB999B2E1AEB713600CDB674 /* ThemeTableViewCell.swift */; };
+		CB999B671AF0BBB700CDB674 /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB999B661AF0BBB700CDB674 /* NSDateExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		CB999B1A1AE78E6300CDB674 /* DigitClockinSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitClockinSwiftTests.swift; sourceTree = "<group>"; };
 		CB999B2A1AEB5AAA00CDB674 /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		CB999B2E1AEB713600CDB674 /* ThemeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeTableViewCell.swift; sourceTree = "<group>"; };
+		CB999B661AF0BBB700CDB674 /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		CB999B011AE78E6300CDB674 /* DigitClockinSwift */ = {
 			isa = PBXGroup;
 			children = (
+				CB999B681AF0C53800CDB674 /* Library */,
 				CB999B041AE78E6300CDB674 /* AppDelegate.swift */,
 				CB999B2D1AEB5B1E00CDB674 /* View */,
 				CB999B2C1AEB5B0600CDB674 /* Controller */,
@@ -92,6 +95,7 @@
 		CB999B021AE78E6300CDB674 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CB999B081AE78E6300CDB674 /* Main.storyboard */,
 				CB999B0B1AE78E6300CDB674 /* Images.xcassets */,
 				CB999B0D1AE78E6300CDB674 /* LaunchScreen.xib */,
 				CB999B031AE78E6300CDB674 /* Info.plist */,
@@ -129,9 +133,16 @@
 		CB999B2D1AEB5B1E00CDB674 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CB999B081AE78E6300CDB674 /* Main.storyboard */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		CB999B681AF0C53800CDB674 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				CB999B661AF0BBB700CDB674 /* NSDateExtension.swift */,
+			);
+			name = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB999B2B1AEB5AAA00CDB674 /* SettingTableViewController.swift in Sources */,
+				CB999B671AF0BBB700CDB674 /* NSDateExtension.swift in Sources */,
 				CB999B2F1AEB713600CDB674 /* ThemeTableViewCell.swift in Sources */,
 				CB999B071AE78E6300CDB674 /* DigitClockViewController.swift in Sources */,
 				CB999B051AE78E6300CDB674 /* AppDelegate.swift in Sources */,

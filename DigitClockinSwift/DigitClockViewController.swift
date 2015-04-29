@@ -8,9 +8,13 @@
 
 import UIKit
 
-let digitName = "Digits"
-let rotation_lock = "rotation_lock"
-let rotation_unlock = "rotation_unlock"
+enum ImageName: String {
+  case Digits = "Digits"
+  case RotationLock = "rotation_lock"
+  case RotationUnLock = "rotation_unlock"
+}
+
+let spaceViewAlpha: CGFloat = 0.5
 
 class DigitClockViewController: UIViewController {
   
@@ -28,11 +32,15 @@ class DigitClockViewController: UIViewController {
   weak var timer: NSTimer?
   
   var isRotate: Bool = true {
-    didSet {
-      dispatch_async(dispatch_get_main_queue(), { () -> Void in
-        self.rotationButton.imageView?.image = isRotate ? UIImage(named: rotation_unlock) : UIImage(named: rotation_lock)
-      })
-    }
+    didSet { self.updateRotateLockButtonImage() }
+  }
+  
+  var isTouch: Bool = false {
+    didSet { self.updateSpaceView() }
+  }
+  
+  var weekday: Int = 0 {
+    didSet { self.updateWeekLabel() }
   }
   
   deinit {
@@ -46,93 +54,135 @@ extension DigitClockViewController {
     super.viewDidLoad()
     self.setup()
   }
-  
-  override func viewDidAppear(animated: Bool) {
-    super.viewDidAppear(animated)
-  }
-  
-  override func prefersStatusBarHidden() -> Bool {
-    return true
-  }
-  override func shouldAutorotate() -> Bool {
-    return isRotate
-  }
-  
-  
-  override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
-    
-    if UIDevice.currentDevice().orientation.isLandscape.boolValue {
-      println("Now Device Orientation is Landscape")
-    } else {
-      println("Now Device Orientation is Portrait")
-    }
-    
-    coordinator.animateAlongsideTransition({ (context: UIViewControllerTransitionCoordinatorContext!) -> Void in
-      
-      }, completion: { (context: UIViewControllerTransitionCoordinatorContext!) -> Void in
-      println("Rotation is Completion")
-    })
-  }
 }
 
-// MARK: Initial View Handling
+// MARK: Initialize
 extension DigitClockViewController {
   func setup() {
     self.initWeekLabel()
     self.initTimeView()
     self.initColonView()
+    self.initRotationBtn()
     self.onTickTimer()
+    self.addTapGesture()
   }
   
   func initTimeView() {
-    self.timeImageViews.map {
-      self.setDigitImageLayer(0, forView: $0)
-    }
+    let f = self.setDigitImageLayer
+    self.timeImageViews.map { f(0, forView: $0) }
   }
   
   func initColonView() {
-    self.colonImageViews.map {
-      self.setDigitImageLayer(10, forView: $0)
-    }
+    let f = self.setDigitImageLayer
+    self.colonImageViews.map { f(10, forView: $0) }
   }
   
   func initWeekLabel() {
     var count = 1
-    let (weekday, _, _, _) = getDate()
-    self.weekLabels.map { (label: UILabel) -> UILabel in
+    self.weekday = NSDate.getNowDate().weekday
+    self.weekLabels.map { (label) -> UILabel in
       label.tag = count++
-      label.alpha = (label.tag == weekday) ? 1.0 : 0.2
+      label.alpha = (label.tag == self.weekday) ? 1.0 : 0.2
       return label
     }
   }
-  func initRotationButton() {
-    self.rotationButton.alpha = 0.0
+  
+  func initRotationBtn() {
+    if self.respondsToSelector( Selector("pressedRotationBtn:") ) {
+      self.rotationButton.addTarget(
+        self,
+        action: Selector("pressedRotationBtn:"),
+        forControlEvents: .TouchUpInside)
+    }
   }
   
-  @IBAction func pressedRotationBtn(sender: UIButton) {
-    println(__FUNCTION__)
-    isRotate = !isRotate
+  func addTapGesture() {
+    if self.respondsToSelector( Selector("handleSingleTap:") ) {
+      var singleTap: UITapGestureRecognizer = UITapGestureRecognizer(
+        target: self,
+        action: Selector("handleSingleTap:"))
+      
+      self.view.addGestureRecognizer(singleTap)
+    }
+  }
+}
+
+// MARK: View Handling
+extension DigitClockViewController {
+  override func prefersStatusBarHidden() -> Bool {
+    return true
   }
   
-  private func setDigitImageLayer(xPosition: Int, forView view: UIImageView) {
-    view.layer.contents = UIImage(named: digitName)?.CGImage
+  func updateSpaceView() {
+    let f: (NSTimeInterval, () -> ()) -> () = {
+      self.spaceView.layer.removeAllAnimations()
+      UIView.animateWithDuration($0, animations: $1)
+    }
+    
+    if self.isTouch {
+      f(0.7) { self.spaceView.alpha = spaceViewAlpha }
+    } else {
+      f(0.7) { self.spaceView.alpha = 0 }
+    }
+  }
+  
+  func updateRotateLockButtonImage() {
+    dispatch_async( dispatch_get_main_queue() ) {
+      let rotationBtnName = self.isRotate ? ImageName.RotationUnLock.rawValue : ImageName.RotationLock.rawValue
+      self.rotationButton.imageView?.image = UIImage(named: rotationBtnName)
+      
+    }
+  }
+  
+  func updateWeekLabel() {
+    dispatch_async( dispatch_get_main_queue() ) {
+      self.weekLabels.map {
+        $0.alpha = ($0.tag == self.weekday ? 1.0 : 0.2)
+      }
+    }
+  }
+  
+  func setDigitImageLayer(xPosition: Int, forView view: UIImageView) {
+    view.layer.contents = UIImage(named: ImageName.Digits.rawValue)?.CGImage
     view.layer.contentsGravity = kCAGravityResizeAspect
     view.layer.magnificationFilter = kCAFilterNearest
+    
     self.setDigitContentRect(xPosition, forView: view)
   }
   
-  private func setDigitContentRect(xPosition: Int, forView view: UIImageView) {
-    view.layer.contentsRect = CGRect(x: Double(xPosition)/11.0,
+  func setDigitContentRect(xPosition: Int, forView view: UIImageView) {
+    view.layer.contentsRect = CGRect(
+      x: Double(xPosition)/11.0,
       y: 0,
       width: 1.0/11.0,
       height: 1.0)
   }
 }
 
+// MARK: View Rotate
+extension DigitClockViewController {
+  override func shouldAutorotate() -> Bool {
+    return isRotate
+  }
+}
+
+// MARK: Touch/Gesture Handling
+extension DigitClockViewController {
+  func handleSingleTap(recognizer: UITapGestureRecognizer) {
+    self.isTouch = !self.isTouch
+  }
+  
+  func pressedRotationBtn(sender: UIButton) {
+    self.isRotate = !self.isRotate
+  }
+}
+
+
 // MARK: Time Handling
 extension DigitClockViewController {
   func onTickTimer() {
-    self.timer = NSTimer.scheduledTimerWithTimeInterval(1.0,
+    self.timer = NSTimer.scheduledTimerWithTimeInterval(
+      1.0,
       target: self,
       selector: Selector("tick"),
       userInfo: nil,
@@ -145,21 +195,21 @@ extension DigitClockViewController {
   }
   
   func tick() {
-    let (weekday, hours, minutes, seconds) = self.getDate()
-    let timeList = getTimeList(hours, minutes: minutes, seconds: seconds)
+    let date = NSDate.getNowDate()
     
-    self.weekLabels.map { (label: UILabel) -> UILabel in
-      label.alpha = (label.tag == weekday) ? 1.0 : 0.2
-      return label
-    }
+    self.weekday = date.weekday
     
     UIView.animateWithDuration(1.0) {
-      for (index, time) in enumerate(timeList) {
-        self.setDigitContentRect(time, forView: self.timeImageViews[index])
-      }
-      self.colonImageViews.map { (iView: UIImageView) -> UIImageView in
-        iView.alpha = (iView.alpha == 1.0) ? 0.2 : 1.0
-        return iView
+      var count = 0
+      let f = self.setDigitContentRect
+      let timeList = self.getTimeList(
+        hour: date.hour,
+        minute: date.minute,
+        second: date.second)
+      
+      timeList.map { f($0, forView: self.timeImageViews[count++]) }
+      self.colonImageViews.map {
+        $0.alpha = ($0.alpha == 1.0 ? 0.2 : 1.0)
       }
     }
   }
@@ -176,27 +226,14 @@ extension DigitClockViewController {
 
 // MARK: Util Methods
 extension DigitClockViewController {
-  func getTimeList(hours: Int, minutes: Int, seconds: Int) -> [Int] {
+  func getTimeList(#hour: Int, minute: Int, second: Int) -> [Int] {
     var timeLists: [Int] = []
-    timeLists += [hours / 10]
-    timeLists += [hours % 10]
-    timeLists += [minutes / 10]
-    timeLists += [minutes % 10]
-    timeLists += [seconds / 10]
-    timeLists += [seconds % 10]
+    timeLists += [hour / 10]
+    timeLists += [hour % 10]
+    timeLists += [minute / 10]
+    timeLists += [minute % 10]
+    timeLists += [second / 10]
+    timeLists += [second % 10]
     return timeLists
-  }
-  
-  func getDate() -> (Int, Int, Int, Int) {
-    let date = NSDate()
-    let calendar = NSCalendar.currentCalendar()
-    let components = calendar.components(.CalendarUnitYear | .CalendarUnitMonth | .CalendarUnitDay | .CalendarUnitWeekday | .CalendarUnitHour | .CalendarUnitMinute | .CalendarUnitSecond, fromDate: date)
-    
-    let weekday = components.weekday
-    let hour = components.hour
-    let minutes = components.minute
-    let seconds = components.second
-    
-    return (weekday, hour, minutes, seconds)
   }
 }
