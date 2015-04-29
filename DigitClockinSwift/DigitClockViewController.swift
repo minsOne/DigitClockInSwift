@@ -28,8 +28,10 @@ class DigitClockViewController: UIViewController {
   @IBOutlet var colonImageViews: [UIImageView]!
   
   @IBOutlet weak var rotationButton: UIButton!
+  @IBOutlet weak var settingButton: UIButton!
   
-  weak var timer: NSTimer?
+  weak var timeViewtimer: NSTimer?
+  weak var spaceViewTimer: NSTimer?
   
   var isRotate: Bool = true {
     didSet { self.updateRotateLockButtonImage() }
@@ -45,6 +47,7 @@ class DigitClockViewController: UIViewController {
   
   deinit {
     self.offTickTimer()
+    self.offSpaceViewTimer()
   }
 }
 
@@ -59,6 +62,7 @@ extension DigitClockViewController {
 // MARK: Initialize
 extension DigitClockViewController {
   func setup() {
+    self.initBackgroundView()
     self.initWeekLabel()
     self.initTimeView()
     self.initColonView()
@@ -67,6 +71,17 @@ extension DigitClockViewController {
     self.addTapGesture()
   }
   
+  func initBackgroundView() {
+    let theme = ThemeColor.initialThemeColor()
+    if let nowTheme = theme.nowTheme {
+      self.view.backgroundColor = nowTheme
+    } else {
+      let initTheme = ThemeColor.getThemeColorList().first
+      self.view.backgroundColor = initTheme
+      ThemeColor.sharedInstance.nowTheme = initTheme
+    }
+  }
+
   func initTimeView() {
     let f = self.setDigitImageLayer
     self.timeImageViews.map { f(0, forView: $0) }
@@ -127,21 +142,26 @@ extension DigitClockViewController {
   }
   
   func updateRotateLockButtonImage() {
-    dispatch_async( dispatch_get_main_queue() ) {
+    self.asyncUI {
       let rotationBtnName = self.isRotate ? ImageName.RotationUnLock.rawValue : ImageName.RotationLock.rawValue
       self.rotationButton.imageView?.image = UIImage(named: rotationBtnName)
-      
     }
   }
   
   func updateWeekLabel() {
-    dispatch_async( dispatch_get_main_queue() ) {
+    self.asyncUI {
       self.weekLabels.map {
         $0.alpha = ($0.tag == self.weekday ? 1.0 : 0.2)
       }
     }
   }
-  
+
+  func updateBackground(theme: UIColor) {
+    self.asyncUI { self.view.backgroundColor = theme }
+    ThemeColor.sharedInstance.nowTheme = theme
+    ThemeColor.storeThemeColor(ThemeColor.sharedInstance)
+  }
+
   func setDigitImageLayer(xPosition: Int, forView view: UIImageView) {
     view.layer.contents = UIImage(named: ImageName.Digits.rawValue)?.CGImage
     view.layer.contentsGravity = kCAGravityResizeAspect
@@ -170,6 +190,10 @@ extension DigitClockViewController {
 extension DigitClockViewController {
   func handleSingleTap(recognizer: UITapGestureRecognizer) {
     self.isTouch = !self.isTouch
+
+    if !UIDevice.currentDevice().model.hasPrefix("iPad") {
+      self.isTouch ? self.onSpaceViewTimer() : self.offSpaceViewTimer()
+    }
   }
   
   func pressedRotationBtn(sender: UIButton) {
@@ -181,7 +205,7 @@ extension DigitClockViewController {
 // MARK: Time Handling
 extension DigitClockViewController {
   func onTickTimer() {
-    self.timer = NSTimer.scheduledTimerWithTimeInterval(
+    self.timeViewtimer = NSTimer.scheduledTimerWithTimeInterval(
       1.0,
       target: self,
       selector: Selector("tick"),
@@ -190,13 +214,12 @@ extension DigitClockViewController {
   }
   
   func offTickTimer() {
-    self.timer?.invalidate()
-    self.timer = nil
+    self.timeViewtimer?.invalidate()
+    self.timeViewtimer = nil
   }
   
   func tick() {
     let date = NSDate.getNowDate()
-    
     self.weekday = date.weekday
     
     UIView.animateWithDuration(1.0) {
@@ -208,13 +231,44 @@ extension DigitClockViewController {
         second: date.second)
       
       timeList.map { f($0, forView: self.timeImageViews[count++]) }
-      self.colonImageViews.map {
-        $0.alpha = ($0.alpha == 1.0 ? 0.2 : 1.0)
-      }
+      self.colonImageViews.map { $0.alpha = ($0.alpha == 1.0 ? 0.2 : 1.0) }
     }
+  }
+
+  func onSpaceViewTimer() {
+    if self.respondsToSelector( Selector("fadeSpaceView") ) {
+      self.spaceViewTimer = NSTimer.scheduledTimerWithTimeInterval(
+        4.0, 
+        target: self, 
+        selector: Selector("fadeSpaceView"), 
+        userInfo: nil,
+        repeats: false)
+    }
+  }
+
+  func offSpaceViewTimer() {
+    self.spaceViewTimer?.invalidate()
+    self.spaceViewTimer = nil
+  }
+
+  func fadeSpaceView() {
+    self.offSpaceViewTimer()
+    self.isTouch = false
   }
 }
 
+// MARK: Segue
+extension DigitClockViewController {
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "toSettingVC" {
+      let destinationNavigationController = segue.destinationViewController as! UINavigationController
+      let targetController =
+      destinationNavigationController.topViewController as! SettingTableViewController
+
+      targetController.delegate = self
+    }
+  }
+}
 
 // MARK: Memory Handling
 extension DigitClockViewController {
@@ -235,5 +289,17 @@ extension DigitClockViewController {
     timeLists += [second / 10]
     timeLists += [second % 10]
     return timeLists
+  }
+
+  func asyncUI( f:() -> Void ) {
+    dispatch_async( dispatch_get_main_queue() ) {
+      f()
+    }
+  }
+
+  func asyncLogic( f:() -> Void ) {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+      f()
+    }
   }
 }
