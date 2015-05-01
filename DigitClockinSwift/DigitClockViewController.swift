@@ -33,6 +33,8 @@ class DigitClockViewController: UIViewController {
   weak var timeViewtimer: NSTimer?
   weak var spaceViewTimer: NSTimer?
   
+  var lastTranslation: CGPoint?
+  
   var isRotate: Bool = true {
     didSet { self.updateRotateLockButtonImage() }
   }
@@ -69,6 +71,7 @@ extension DigitClockViewController {
     self.initRotationBtn()
     self.onTickTimer()
     self.addTapGesture()
+    self.addPanGesuture()
   }
   
   func initBackgroundView() {
@@ -118,6 +121,15 @@ extension DigitClockViewController {
         action: Selector("handleSingleTap:"))
       
       self.view.addGestureRecognizer(singleTap)
+    }
+  }
+  
+  func addPanGesuture() {
+    if self.respondsToSelector(Selector("displayGestureForPanGestureRecognizer:")) {
+      var pan = UIPanGestureRecognizer(
+        target: self, 
+        action: Selector("displayGestureForPanGestureRecognizer:"))
+      self.view.addGestureRecognizer(pan)
     }
   }
 }
@@ -198,6 +210,41 @@ extension DigitClockViewController {
   
   func pressedRotationBtn(sender: UIButton) {
     self.isRotate = !self.isRotate
+  }
+  func changeViewAlpha(nowPoint: CGPoint) {
+    let alpha = self.view.alpha
+    
+    if let lastPoint = lastTranslation {
+      if lastPoint.y > nowPoint.y && alpha < 1.0 {
+        self.view.alpha = alpha + 0.01
+      } else if lastPoint.y < nowPoint.y && alpha >= 0.02 {
+        self.view.alpha = alpha - 0.01
+      }
+    }
+    lastTranslation = nowPoint
+  }
+  
+  func displayGestureForPanGestureRecognizer(sender: UIPanGestureRecognizer) {
+    let translation = sender.translationInView(self.view)
+    
+    switch (sender.state) {
+    case .Began:
+      lastTranslation = translation
+      break
+    case .Changed:
+      self.changeViewAlpha(translation)
+      break
+    case .Cancelled:
+      fallthrough
+    case .Ended:
+      fallthrough
+    case .Failed:
+      fallthrough
+    case .Possible:
+      fallthrough
+    default:
+      lastTranslation = nil
+    }
   }
 }
 
