@@ -6,9 +6,9 @@ previous, I made a simple and flat digital clock, it was opend.
 
 Now, I convert Objective-C to Swift. 
 
-[Now on sale in the iTunes Store](https://itunes.apple.com/app/digit-clock/id848714903?l=ko&ls=1&mt=8). Available for the iPhone, iPod touch, and iPad. [Download it now](https://itunes.apple.com/app/digit-clock/id848714903?l=ko&ls=1&mt=8) and support the project.
+Available for the iPhone, iPod touch, and iPad. [Download it now](https://itunes.apple.com/app/digit-clock/id848714903?l=ko&ls=1&mt=8) and support the project.
 
-![DigitClock](https://github.com/minsOne/DigitClock/blob/master/DigitClock.gif?raw=true)
+[![DigitClock](http://img.youtube.com/vi/0mfNr1SkccU/0.jpg)](http://www.youtube.com/watch?v=0mfNr1SkccU)
 
 You can open [old project in Objective-C](https://github.com/minsOne/DigitClock)
 
