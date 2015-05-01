@@ -30,6 +30,9 @@ extension SettingTableViewController {
     super.viewDidLoad()
     setup()
   }
+  override func prefersStatusBarHidden() -> Bool {
+    return true
+  }
 }
 
 // MARK: Initialize
