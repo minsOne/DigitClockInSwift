@@ -210,7 +210,11 @@ extension DigitClockViewController {
   
   func pressedRotationBtn(sender: UIButton) {
     self.isRotate = !self.isRotate
+
+    self.offSpaceViewTimer()
+    self.onSpaceViewTimer()
   }
+
   func changeViewAlpha(nowPoint: CGPoint) {
     let alpha = self.view.alpha
     
