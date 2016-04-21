@@ -26,15 +26,10 @@ struct Date {
 extension NSDate {
   
   class func getNowDate() -> Date {
-    let date = self()
+    let date = self.init()
     let calendar = NSCalendar.currentCalendar()
     let components = calendar.components(
-      .CalendarUnitYear |
-      .CalendarUnitDay |
-      .CalendarUnitWeekday |
-      .CalendarUnitHour |
-      .CalendarUnitMinute |
-      .CalendarUnitSecond,
+      [.Year, .Day, .Weekday, .Hour, .Minute, .Second],
       fromDate: date)
     
     return Date(

@@ -32,27 +32,25 @@ extension SettingThemeTableViewCell {
 extension SettingThemeTableViewCell {
   func initThemeList() {
     themeList = ThemeColor.getThemeColorList()
-    self.themeButtons.map {
-      $0.layer.cornerRadius = $0.frame.size.height / 5
-    }
+    themeButtons.forEach { $0.layer.cornerRadius = $0.frame.size.height / 5 }
   }
 }
 
 // MARK: View Handling
 extension SettingThemeTableViewCell {
   func adjustThemeInButton() {
-    for (index, button) in enumerate(themeButtons) {
+    for (index, button) in themeButtons.enumerate() {
       button.backgroundColor = themeList[index]
       button.tag = index
     }
   }
 
   func adjustTouchInButton() {
-    if self.respondsToSelector(Selector("pressedThemeButton:")) {
-      themeButtons.map {
+    if self.respondsToSelector(#selector(SettingThemeTableViewCell.pressedThemeButton(_:))) {
+      themeButtons.forEach {
         $0.addTarget(
           self,
-          action: Selector("pressedThemeButton:"),
+          action: #selector(SettingThemeTableViewCell.pressedThemeButton(_:)),
           forControlEvents: UIControlEvents.TouchUpInside)
       }
     }
@@ -60,7 +58,7 @@ extension SettingThemeTableViewCell {
 
   func pressedThemeButton(button: UIButton) {
     if let delegate = delegate, theme = UIColor?(themeList[button.tag])
-      where delegate.respondsToSelector("selectedBackground:") {
+      where delegate.respondsToSelector(#selector(delegate.selectedBackground(_:))) {
         delegate.selectedBackground(theme)
     }
   }

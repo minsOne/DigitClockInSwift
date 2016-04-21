@@ -17,7 +17,7 @@ class ThemeColor: NSObject, NSCoding {
     super.init()
   }
 
-  required init(coder: NSCoder) {
+  required init?(coder: NSCoder) {
     self.nowTheme = coder.decodeObjectForKey("nowTheme") as? UIColor
     super.init()
   }
@@ -27,7 +27,7 @@ class ThemeColor: NSObject, NSCoding {
   }
 
   class func initialThemeColor() -> ThemeColor {
-    var unArchivedData: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("themeColor")
+    let unArchivedData: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("themeColor")
 
     if let data: AnyObject = unArchivedData {
       return NSKeyedUnarchiver.unarchiveObjectWithData(data as! NSData) as! ThemeColor
