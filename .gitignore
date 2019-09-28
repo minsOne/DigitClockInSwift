@@ -52,3 +52,9 @@ xcuserdata
 DerivedData
 *.xcuserstate
 
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+

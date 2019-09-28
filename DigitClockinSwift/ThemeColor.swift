@@ -51,8 +51,8 @@ class ThemeColor: NSObject, NSCoding {
         colorList += [UIColor(red:1, green:0.58, blue:0, alpha:1)]
         colorList += [UIColor(red:0.68, green:0, blue:0.8, alpha:1)]
         colorList += [UIColor(red:0.4, green:0.4, blue:0.4, alpha:1)]
-        colorList += [UIColor(red:0.88, green:0.65, blue:0.47, alpha:1)]
-        colorList += [UIColor(red:0.5, green:0.64, blue:0.81, alpha:1)]
+        colorList += [UIColor.rgba(r: 247, g: 202, b: 201, a: 1)]
+        colorList += [UIColor.rgba(r: 145, g: 168, b: 209, a: 1)]
         return colorList
     }
 }
