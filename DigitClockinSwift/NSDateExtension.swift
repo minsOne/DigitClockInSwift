@@ -23,22 +23,19 @@ struct Date {
   }
 }
 
-extension NSDate {
-  
-  class func getNowDate() -> Date {
-    let date = self.init()
-    let calendar = NSCalendar.currentCalendar()
-    let components = calendar.components(
-      [.Year, .Day, .Weekday, .Hour, .Minute, .Second],
-      fromDate: date)
+extension Date {
+  static func getNowDate() -> Date {
+    let date = Foundation.Date()
+    let calendar = Calendar.current
+    let components = calendar.dateComponents([.year, .day, .weekday, .hour, .minute, .second], from: date)
     
     return Date(
-      year: components.year,
-      month: components.month,
-      day: components.day,
-      weekday: components.weekday,
-      hour: components.hour,
-      minute: components.minute,
-      second: components.second)
+      year: components.year ?? 0,
+      month: components.month ?? 0,
+      day: components.day ?? 0,
+      weekday: components.weekday ?? 0,
+      hour: components.hour ?? 0,
+      minute: components.minute ?? 0,
+      second: components.second ?? 0)
   }
 }

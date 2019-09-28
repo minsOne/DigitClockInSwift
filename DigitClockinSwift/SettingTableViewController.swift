@@ -13,11 +13,11 @@ let kMakerSectionIndex = 1
 let kMakerSectionRow = 2, kDefaultRow = 1
 
 class SettingTableViewController: UITableViewController {
-
+    
     // MARK: Properties
     var btnDone: UIBarButtonItem?
     var headerTitleList: [String] = []
-    var delegate: DigitClockViewController?
+    weak var delegate: DigitClockViewController?
 }
 
 // MARK: View Life Cycle
@@ -25,14 +25,13 @@ extension SettingTableViewController {
     override func loadView() {
         super.loadView()
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
     }
-    override func prefersStatusBarHidden() -> Bool {
-        return true
-    }
+    
+    override var prefersStatusBarHidden: Bool { true }
 }
 
 // MARK: Initialize
@@ -42,73 +41,71 @@ extension SettingTableViewController {
         self.headerTitleList = getHeaderTitleList()
         self.initBarButton()
     }
-
+    
     func initBarButton() {
-        if self.respondsToSelector(#selector(SettingTableViewController.pressedDoneBtn(_:))) {
-            btnDone = UIBarButtonItem(
-                barButtonSystemItem: .Done,
-                target: self,
-                action: #selector(SettingTableViewController.pressedDoneBtn(_:)))
+        guard responds(to: #selector(SettingTableViewController.pressedDoneBtn))
+            else { return }
 
-            self.navigationItem.setRightBarButtonItem(btnDone, animated: true)
-        }
+        btnDone = UIBarButtonItem(
+            barButtonSystemItem: .done,
+            target: self,
+            action: #selector(SettingTableViewController.pressedDoneBtn))
+        
+        navigationItem.setRightBarButton(btnDone, animated: true)
     }
 }
 
 // MARK: UITableViewDataSource
 extension SettingTableViewController {
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return kSectionCount
     }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return section == kMakerSectionIndex ? kMakerSectionRow : kDefaultRow
     }
-
-    override func tableView(tableView: UITableView,
-                            cellForRowAtIndexPath
-        indexPath: NSIndexPath) -> UITableViewCell {
-
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: SettingTableViewCell
-
+        
         if indexPath.section == 1 {
-            cell = tableView.dequeueReusableCellWithIdentifier(makerCellIdentifier,
-                                                               forIndexPath: indexPath)
+            cell = tableView.dequeueReusableCell(withIdentifier: makerCellIdentifier,
+                                                 for: indexPath)
                 as! SettingMakerTableViewCell
             let makerCell = cell as! SettingMakerTableViewCell
-
-            makerCell.makerLabel.text = self.getMakerText(indexPath.row)
-
+            
+            makerCell.makerLabel.text = self.getMakerText(index: indexPath.row)
+            
         } else if indexPath.section == 2 {
-            cell = tableView.dequeueReusableCellWithIdentifier(
-                versionCellIdentifier,
-                forIndexPath: indexPath)
+            cell = tableView.dequeueReusableCell(
+                withIdentifier: versionCellIdentifier,
+                for: indexPath)
                 as! SettingVersionTableViewCell
-
+            
             let versionCell = cell as! SettingVersionTableViewCell
-            let version = NSBundle.mainBundle().infoDictionary?["CFBundleShortVersionString"] as! String
-
+            let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
+            
             versionCell.versionLabel.text = "Version : " + version
-
+            
         } else {
-            cell = tableView.dequeueReusableCellWithIdentifier(themeCellIdentifier, forIndexPath: indexPath)
+            cell = tableView.dequeueReusableCell(withIdentifier: themeCellIdentifier, for: indexPath)
                 as! SettingThemeTableViewCell
         }
-
-        cell.selectionStyle = .None
+        
+        cell.selectionStyle = .none
         cell.delegate = self
-
+        
         return cell
     }
-
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return String?(self.headerTitleList[section]) ?? "Title"
     }
 }
 
 // MARK: UITableViewDelegate
 extension SettingTableViewController {
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80.0
     }
 }
@@ -116,18 +113,14 @@ extension SettingTableViewController {
 
 // MARK: Touch/Gesture Handling
 extension SettingTableViewController {
-    func pressedDoneBtn(sender: UIBarButtonItem) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @objc func pressedDoneBtn(sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
     }
-
+    
     func selectedBackground(theme: UIColor) {
-        guard let delegate = delegate
-            where delegate.respondsToSelector(#selector(delegate.handleSingleTap(_:)))
-            else { return }
-
-        delegate.updateBackground(theme)
-        if !UIDevice.currentDevice().model.hasPrefix("iPad") {
-            self.dismissViewControllerAnimated(true, completion: nil)
+        delegate?.updateBackground(theme: theme)
+        if !UIDevice.current.model.hasPrefix("iPad") {
+            self.dismiss(animated: true, completion: nil)
         }
     }
 }
