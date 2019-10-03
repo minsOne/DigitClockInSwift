@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import FirebaseCore
+import Firebase
 
 public class Analytics {
     public init() {
