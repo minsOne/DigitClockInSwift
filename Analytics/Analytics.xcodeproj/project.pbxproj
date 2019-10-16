@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB2CD587234646C7005A8DE2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB68BACC233F4FEF00B08DC9 /* GoogleService-Info.plist */; };
 		CB68BAA2233F48B400B08DC9 /* Analytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB68BA98233F48B400B08DC9 /* Analytics.framework */; };
 		CB68BAA7233F48B400B08DC9 /* AnalyticsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB68BAA6233F48B400B08DC9 /* AnalyticsTests.swift */; };
 		CB68BAA9233F48B400B08DC9 /* Analytics.h in Headers */ = {isa = PBXBuildFile; fileRef = CB68BA9B233F48B400B08DC9 /* Analytics.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -14,27 +15,16 @@
 		CB68BAEB233F746400B08DC9 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB68BAEA233F746400B08DC9 /* StoreKit.framework */; };
 		CB68BAED233F747100B08DC9 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CB68BAEC233F746C00B08DC9 /* libsqlite3.0.tbd */; };
 		CB68BAF9233F7A8800B08DC9 /* FIRAnalyticsConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB68BAEE233F7A8700B08DC9 /* FIRAnalyticsConnector.framework */; };
-		CB68BAFA233F7A8800B08DC9 /* FIRAnalyticsConnector.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB68BAEE233F7A8700B08DC9 /* FIRAnalyticsConnector.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB68BAFB233F7A8800B08DC9 /* GoogleAppMeasurement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB68BAEF233F7A8700B08DC9 /* GoogleAppMeasurement.framework */; };
-		CB68BAFC233F7A8800B08DC9 /* GoogleAppMeasurement.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB68BAEF233F7A8700B08DC9 /* GoogleAppMeasurement.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB68BAFD233F7A8800B08DC9 /* GoogleDataTransportCCTSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB68BAF0233F7A8700B08DC9 /* GoogleDataTransportCCTSupport.framework */; };
-		CB68BAFE233F7A8800B08DC9 /* GoogleDataTransportCCTSupport.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB68BAF0233F7A8700B08DC9 /* GoogleDataTransportCCTSupport.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB68BAFF233F7A8800B08DC9 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB68BAF1233F7A8700B08DC9 /* Firebase.framework */; };
-		CB68BB00233F7A8800B08DC9 /* Firebase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB68BAF1233F7A8700B08DC9 /* Firebase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB68BB01233F7A8800B08DC9 /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB68BAF2233F7A8700B08DC9 /* nanopb.framework */; };
-		CB68BB02233F7A8800B08DC9 /* nanopb.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB68BAF2233F7A8700B08DC9 /* nanopb.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB68BB03233F7A8800B08DC9 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB68BAF3233F7A8700B08DC9 /* FirebaseInstanceID.framework */; };
-		CB68BB04233F7A8800B08DC9 /* FirebaseInstanceID.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB68BAF3233F7A8700B08DC9 /* FirebaseInstanceID.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB68BB05233F7A8800B08DC9 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB68BAF4233F7A8700B08DC9 /* GoogleUtilities.framework */; };
-		CB68BB06233F7A8800B08DC9 /* GoogleUtilities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB68BAF4233F7A8700B08DC9 /* GoogleUtilities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB68BB07233F7A8800B08DC9 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB68BAF5233F7A8700B08DC9 /* FirebaseAnalytics.framework */; };
-		CB68BB08233F7A8800B08DC9 /* FirebaseAnalytics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB68BAF5233F7A8700B08DC9 /* FirebaseAnalytics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB68BB09233F7A8800B08DC9 /* GoogleDataTransport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB68BAF6233F7A8700B08DC9 /* GoogleDataTransport.framework */; };
-		CB68BB0A233F7A8800B08DC9 /* GoogleDataTransport.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB68BAF6233F7A8700B08DC9 /* GoogleDataTransport.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB68BB0B233F7A8800B08DC9 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB68BAF7233F7A8700B08DC9 /* FirebaseCore.framework */; };
-		CB68BB0C233F7A8800B08DC9 /* FirebaseCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB68BAF7233F7A8700B08DC9 /* FirebaseCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB68BB0D233F7A8800B08DC9 /* FirebaseCoreDiagnostics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB68BAF8233F7A8800B08DC9 /* FirebaseCoreDiagnostics.framework */; };
-		CB68BB0E233F7A8800B08DC9 /* FirebaseCoreDiagnostics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB68BAF8233F7A8800B08DC9 /* FirebaseCoreDiagnostics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB68BB17233F7CA900B08DC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB68BB16233F7CA900B08DC9 /* AppDelegate.swift */; };
 		CB68BB19233F7CA900B08DC9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB68BB18233F7CA900B08DC9 /* SceneDelegate.swift */; };
 		CB68BB1B233F7CA900B08DC9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB68BB1A233F7CA900B08DC9 /* ContentView.swift */; };
@@ -63,27 +53,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		CB68BB0F233F7A8800B08DC9 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				CB68BB08233F7A8800B08DC9 /* FirebaseAnalytics.framework in Embed Frameworks */,
-				CB68BAFC233F7A8800B08DC9 /* GoogleAppMeasurement.framework in Embed Frameworks */,
-				CB68BB04233F7A8800B08DC9 /* FirebaseInstanceID.framework in Embed Frameworks */,
-				CB68BAFE233F7A8800B08DC9 /* GoogleDataTransportCCTSupport.framework in Embed Frameworks */,
-				CB68BB02233F7A8800B08DC9 /* nanopb.framework in Embed Frameworks */,
-				CB68BAFA233F7A8800B08DC9 /* FIRAnalyticsConnector.framework in Embed Frameworks */,
-				CB68BB0C233F7A8800B08DC9 /* FirebaseCore.framework in Embed Frameworks */,
-				CB68BB0E233F7A8800B08DC9 /* FirebaseCoreDiagnostics.framework in Embed Frameworks */,
-				CB68BB0A233F7A8800B08DC9 /* GoogleDataTransport.framework in Embed Frameworks */,
-				CB68BB00233F7A8800B08DC9 /* Firebase.framework in Embed Frameworks */,
-				CB68BB06233F7A8800B08DC9 /* GoogleUtilities.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		CB68BB48233F7CCC00B08DC9 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -274,7 +243,6 @@
 				CB68BA94233F48B400B08DC9 /* Sources */,
 				CB68BA95233F48B400B08DC9 /* Frameworks */,
 				CB68BA96233F48B400B08DC9 /* Resources */,
-				CB68BB0F233F7A8800B08DC9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -369,6 +337,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB2CD587234646C7005A8DE2 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,7 +446,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -507,6 +475,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALIDATE_PRODUCT = NO;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -544,7 +513,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -596,6 +564,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = mh_dylib;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = kr.minsOne.DigitClock.Analytics;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -630,6 +599,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = mh_dylib;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = kr.minsOne.DigitClock.Analytics;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -688,7 +658,7 @@
 				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = AnalyticsSampleApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -710,7 +680,7 @@
 				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = AnalyticsSampleApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

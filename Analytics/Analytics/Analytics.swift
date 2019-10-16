@@ -9,21 +9,16 @@
 import Foundation
 import Firebase
 
-public class Analytics {
+public class DCAnalytics {
     public init() {
-        if let filePath = Bundle.frameworkBundle.path(forResource: "GoogleService-Info", ofType: "plist") {
-            if let fileopts = FirebaseOptions(contentsOfFile: filePath) {
-                FirebaseApp.configure(options: fileopts)
-            }
+        if let filePath = Bundle(for: DCAnalytics.self).path(forResource: "GoogleService-Info", ofType: "plist"),
+            let fileopts = FirebaseOptions(contentsOfFile: filePath) {
+            FirebaseApp.configure(options: fileopts)
+            Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
+                AnalyticsParameterItemID: "id-111",
+                AnalyticsParameterItemName: "title",
+                AnalyticsParameterContentType: "cont"
+            ])
         }
-    }
-}
-
-class FakeBundle {}
-extension Bundle {
-    private class FakeBundle {}
-    
-    static var frameworkBundle: Bundle {
-        return Bundle(for: FakeBundle.self)
     }
 }
