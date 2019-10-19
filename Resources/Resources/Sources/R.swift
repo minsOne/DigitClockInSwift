@@ -22,5 +22,6 @@ public enum R {
         public static let digits: UIImage = .load(name: "Digits")
         public static let rotationLock: UIImage = .load(name: "rotation_lock")
         public static let rotationUnLock: UIImage = .load(name: "rotation_unlock")
+        public static let menuSettingsBt: UIImage = .load(name: "menu_settings_bt")
     }
 }

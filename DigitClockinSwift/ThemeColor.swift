@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 class ThemeColor: NSObject, NSCoding {
-    
     var nowTheme: UIColor?
     static let sharedInstance = ThemeColor()
     
@@ -43,16 +42,14 @@ class ThemeColor: NSObject, NSCoding {
         UserDefaults.standard.synchronize()
     }
     
-    class func getThemeColorList() -> [UIColor] {
-        var colorList: [UIColor] = []
-        colorList += [UIColor(red:1, green:0.19, blue:0.12, alpha:1)]
-        colorList += [UIColor(red:0, green:0.5, blue:0.96, alpha:1)]
-        colorList += [UIColor(red:0.07, green:0.07, blue:0.07, alpha:1)]
-        colorList += [UIColor(red:1, green:0.58, blue:0, alpha:1)]
-        colorList += [UIColor(red:0.68, green:0, blue:0.8, alpha:1)]
-        colorList += [UIColor(red:0.4, green:0.4, blue:0.4, alpha:1)]
-        colorList += [UIColor.rgba(r: 247, g: 202, b: 201, a: 1)]
-        colorList += [UIColor.rgba(r: 145, g: 168, b: 209, a: 1)]
-        return colorList
+    static var colorList: [UIColor] {
+        [UIColor(red:1, green:0.19, blue:0.12, alpha:1),
+         UIColor(red:0, green:0.5, blue:0.96, alpha:1),
+         UIColor(red:0.07, green:0.07, blue:0.07, alpha:1),
+         UIColor(red:1, green:0.58, blue:0, alpha:1),
+         UIColor(red:0.68, green:0, blue:0.8, alpha:1),
+         UIColor(red:0.4, green:0.4, blue:0.4, alpha:1),
+         UIColor.rgba(r: 247, g: 202, b: 201, a: 1),
+         UIColor.rgba(r: 145, g: 168, b: 209, a: 1)]
     }
 }
