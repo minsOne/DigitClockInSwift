@@ -7,10 +7,10 @@
 //
 
 import XCTest
-import Resources
+@testable import Resources
 
 class ResourcesTests: XCTestCase {
-    func test_Resources() {
+    func test_Resources_Sucess() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         print(R.Image.theme1)

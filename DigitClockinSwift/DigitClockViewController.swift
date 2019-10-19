@@ -8,16 +8,11 @@
 
 import UIKit
 import Resources
-import Librarys
-
-private enum ImageName: String {
-  case RotationLock = "rotation_lock"
-  case RotationUnLock = "rotation_unlock"
-}
+import Library
 
 let spaceViewAlpha: CGFloat = 0.5
 
-class DigitClockViewController: UIViewController {
+final class DigitClockViewController: UIViewController {
   
   // MARK: Properties
   @IBOutlet private weak var weekView: UIView!
@@ -36,15 +31,15 @@ class DigitClockViewController: UIViewController {
   
   private var lastTranslation: CGPoint?
   
-  var isRotate: Bool = true {
+  private var isRotate: Bool = true {
     didSet { self.updateRotateLockButtonImage() }
   }
   
-  var isTouch: Bool = false {
+  private var isTouch: Bool = false {
     didSet { self.updateSpaceView() }
   }
   
-  var weekday: Int = 0 {
+  private var weekday: Int = 0 {
     didSet { self.updateWeekLabel() }
   }
   
@@ -73,6 +68,7 @@ extension DigitClockViewController {
     onTickTimer()
     addTapGesture()
     addPanGesuture()
+    updateRotateLockButtonImage()
   }
   
   private func initBackgroundView() {
@@ -154,10 +150,10 @@ extension DigitClockViewController {
   func updateRotateLockButtonImage() {
     let isRotate = self.isRotate
     asyncUI {
-      let rotationBtnName = isRotate
-        ? ImageName.RotationUnLock.rawValue
-        : ImageName.RotationLock.rawValue
-      self.rotationButton.imageView?.image = UIImage(named: rotationBtnName)
+      let rotationImage = isRotate
+        ? R.Image.rotationUnLock
+        : R.Image.rotationLock
+      self.rotationButton.setImage(rotationImage, for: .normal)
     }
   }
   

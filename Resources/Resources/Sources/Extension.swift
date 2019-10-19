@@ -9,17 +9,17 @@
 import Foundation
 import UIKit
 
+private class CurrentBundle {}
+
 extension Bundle {
-    private class FakeBundle {}
-    
-    static var frameworkBundle: Bundle {
-        return Bundle(for: FakeBundle.self)
+    static var current: Bundle {
+        return Bundle(for: CurrentBundle.self)
     }
 }
 
 extension UIImage {
     static func load(name: String) -> UIImage {
-        if let image = UIImage(named: name, in: Bundle.frameworkBundle, compatibleWith: nil) {
+        if let image = UIImage(named: name, in: Bundle.current, compatibleWith: nil) {
             return image
         } else {
             assert(false, "이미지 로드 실패")

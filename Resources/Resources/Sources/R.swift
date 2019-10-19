@@ -20,5 +20,7 @@ public enum R {
         public static let theme7: UIImage = .load(name: "theme7")
         public static let theme8: UIImage = .load(name: "theme8")
         public static let digits: UIImage = .load(name: "Digits")
+        public static let rotationLock: UIImage = .load(name: "rotation_lock")
+        public static let rotationUnLock: UIImage = .load(name: "rotation_unlock")
     }
 }

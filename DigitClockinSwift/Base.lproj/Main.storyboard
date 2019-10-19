@@ -204,7 +204,7 @@
                                             <constraint firstAttribute="width" constant="24" id="Mi3-ZL-YOk"/>
                                             <constraint firstAttribute="height" constant="24" id="kkA-8X-KIt"/>
                                         </constraints>
-                                        <state key="normal" image="rotation_unlock">
+                                        <state key="normal">
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <variation key="default">
@@ -750,6 +750,5 @@
     </scenes>
     <resources>
         <image name="menu_settings_bt" width="24" height="24"/>
-        <image name="rotation_unlock" width="24" height="24"/>
     </resources>
 </document>
