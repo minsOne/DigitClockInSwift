@@ -16,12 +16,8 @@
 		CB999B0C1AE78E6300CDB674 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB999B0B1AE78E6300CDB674 /* Images.xcassets */; };
 		CB999B0F1AE78E6300CDB674 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB999B0D1AE78E6300CDB674 /* LaunchScreen.xib */; };
 		CB999B1B1AE78E6300CDB674 /* DigitClockinSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB999B1A1AE78E6300CDB674 /* DigitClockinSwiftTests.swift */; };
-		CB999B2B1AEB5AAA00CDB674 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB999B2A1AEB5AAA00CDB674 /* SettingTableViewController.swift */; };
-		CB999B2F1AEB713600CDB674 /* SettingThemeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB999B2E1AEB713600CDB674 /* SettingThemeTableViewCell.swift */; };
-		CB999B6C1AF0CB0B00CDB674 /* SettingMakerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB999B6B1AF0CB0B00CDB674 /* SettingMakerTableViewCell.swift */; };
-		CB999B6E1AF0CB1C00CDB674 /* SettingVersionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB999B6D1AF0CB1C00CDB674 /* SettingVersionTableViewCell.swift */; };
-		CB999B721AF0D23B00CDB674 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB999B711AF0D23B00CDB674 /* UIColorExtension.swift */; };
-		CB999B741AF1182900CDB674 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB999B731AF1182900CDB674 /* SettingTableViewCell.swift */; };
+		CBC6BF81235AEE01007D8BAA /* Settings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC6BF80235AEE01007D8BAA /* Settings.framework */; };
+		CBC6BF82235AEE01007D8BAA /* Settings.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CBC6BF80235AEE01007D8BAA /* Settings.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CBE1AA10235AADF100AEA9F9 /* Resources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE1AA0F235AADF100AEA9F9 /* Resources.framework */; };
 		CBE1AA11235AADF100AEA9F9 /* Resources.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CBE1AA0F235AADF100AEA9F9 /* Resources.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CBE1AA3E235AB34500AEA9F9 /* Library.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE1AA3D235AB34500AEA9F9 /* Library.framework */; };
@@ -57,6 +53,7 @@
 				CBE1AA3F235AB34500AEA9F9 /* Library.framework in Embed Frameworks */,
 				CBE1AA11235AADF100AEA9F9 /* Resources.framework in Embed Frameworks */,
 				CB68BAE7233F525700B08DC9 /* Analytics.framework in Embed Frameworks */,
+				CBC6BF82235AEE01007D8BAA /* Settings.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,11 +75,7 @@
 		CB999B191AE78E6300CDB674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB999B1A1AE78E6300CDB674 /* DigitClockinSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitClockinSwiftTests.swift; sourceTree = "<group>"; };
 		CB999B2A1AEB5AAA00CDB674 /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
-		CB999B2E1AEB713600CDB674 /* SettingThemeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingThemeTableViewCell.swift; sourceTree = "<group>"; };
-		CB999B6B1AF0CB0B00CDB674 /* SettingMakerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = SettingMakerTableViewCell.swift; sourceTree = "<group>"; tabWidth = 2; };
-		CB999B6D1AF0CB1C00CDB674 /* SettingVersionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingVersionTableViewCell.swift; sourceTree = "<group>"; };
-		CB999B711AF0D23B00CDB674 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
-		CB999B731AF1182900CDB674 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		CBC6BF80235AEE01007D8BAA /* Settings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Settings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBE1AA0F235AADF100AEA9F9 /* Resources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Resources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBE1AA14235AAEE900AEA9F9 /* Librarys.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Librarys.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBE1AA3D235AB34500AEA9F9 /* Library.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Library.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +89,7 @@
 				CBE1AA3E235AB34500AEA9F9 /* Library.framework in Frameworks */,
 				CBE1AA10235AADF100AEA9F9 /* Resources.framework in Frameworks */,
 				CB68BAE6233F525700B08DC9 /* Analytics.framework in Frameworks */,
+				CBC6BF81235AEE01007D8BAA /* Settings.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +106,7 @@
 		CB68BA33233F42A800B08DC9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CBC6BF80235AEE01007D8BAA /* Settings.framework */,
 				CBE1AA3D235AB34500AEA9F9 /* Library.framework */,
 				CBE1AA14235AAEE900AEA9F9 /* Librarys.framework */,
 				CBE1AA0F235AADF100AEA9F9 /* Resources.framework */,
@@ -151,10 +146,8 @@
 		CB999B011AE78E6300CDB674 /* DigitClockinSwift */ = {
 			isa = PBXGroup;
 			children = (
-				CB999B681AF0C53800CDB674 /* Library */,
 				CB999B041AE78E6300CDB674 /* AppDelegate.swift */,
 				CB79CF3C1AF346EE0019B9F5 /* Model */,
-				CB999B2D1AEB5B1E00CDB674 /* View */,
 				CB999B2C1AEB5B0600CDB674 /* Controller */,
 				CB999B021AE78E6300CDB674 /* Supporting Files */,
 			);
@@ -196,25 +189,6 @@
 				CB999B2A1AEB5AAA00CDB674 /* SettingTableViewController.swift */,
 			);
 			name = Controller;
-			sourceTree = "<group>";
-		};
-		CB999B2D1AEB5B1E00CDB674 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				CB999B2E1AEB713600CDB674 /* SettingThemeTableViewCell.swift */,
-				CB999B6B1AF0CB0B00CDB674 /* SettingMakerTableViewCell.swift */,
-				CB999B6D1AF0CB1C00CDB674 /* SettingVersionTableViewCell.swift */,
-				CB999B731AF1182900CDB674 /* SettingTableViewCell.swift */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		CB999B681AF0C53800CDB674 /* Library */ = {
-			isa = PBXGroup;
-			children = (
-				CB999B711AF0D23B00CDB674 /* UIColorExtension.swift */,
-			);
-			name = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,14 +296,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB999B2B1AEB5AAA00CDB674 /* SettingTableViewController.swift in Sources */,
-				CB999B2F1AEB713600CDB674 /* SettingThemeTableViewCell.swift in Sources */,
-				CB999B741AF1182900CDB674 /* SettingTableViewCell.swift in Sources */,
-				CB999B721AF0D23B00CDB674 /* UIColorExtension.swift in Sources */,
 				CB999B071AE78E6300CDB674 /* DigitClockViewController.swift in Sources */,
 				CB999B051AE78E6300CDB674 /* AppDelegate.swift in Sources */,
-				CB999B6E1AF0CB1C00CDB674 /* SettingVersionTableViewCell.swift in Sources */,
-				CB999B6C1AF0CB0B00CDB674 /* SettingMakerTableViewCell.swift in Sources */,
 				CB79CF3B1AF346E90019B9F5 /* ThemeColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

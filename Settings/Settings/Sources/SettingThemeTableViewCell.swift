@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Resources
 
 let themeCellIdentifier = "ThemeCellId"
 
@@ -31,7 +32,7 @@ extension SettingThemeTableViewCell {
 // MARK: Initialize
 extension SettingThemeTableViewCell {
     func initThemeList() {
-        themeList = ThemeColor.getThemeColorList()
+        themeList = Resources.ThemeColor.allCases.map { $0.color }
         themeButtons.forEach { $0.layer.cornerRadius = $0.frame.size.height / 5 }
     }
 }

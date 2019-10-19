@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+protocol SettingTableViewCellPresenterListener: AnyObject {
+    func selectedBackground(theme: UIColor)
+}
+
 class SettingTableViewCell: UITableViewCell {
-  weak var delegate: SettingTableViewController?
+    weak var delegate: SettingTableViewCellPresenterListener?
 }

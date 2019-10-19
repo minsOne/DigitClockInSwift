@@ -10,8 +10,6 @@ import UIKit
 
 let versionCellIdentifier = "VersionCellId"
 
-class SettingVersionTableViewCell: SettingTableViewCell {
-
+final class SettingVersionTableViewCell: SettingTableViewCell {
   @IBOutlet weak var versionLabel: UILabel!
-
 }

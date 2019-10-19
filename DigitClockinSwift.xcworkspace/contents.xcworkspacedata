@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Settings/Settings.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Clock/Clock.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Library/Library.xcodeproj">
    </FileRef>
    <FileRef

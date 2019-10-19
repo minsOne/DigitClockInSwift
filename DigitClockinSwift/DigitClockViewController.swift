@@ -9,11 +9,11 @@
 import UIKit
 import Resources
 import Library
+import Settings
 
 let spaceViewAlpha: CGFloat = 0.5
 
-final class DigitClockViewController: UIViewController {
-  
+final class DigitClockViewController: UIViewController, Settings.Listener {
   // MARK: Properties
   @IBOutlet private weak var weekView: UIView!
   @IBOutlet private weak var spaceView: UIView!
@@ -69,6 +69,7 @@ extension DigitClockViewController {
     addTapGesture()
     addPanGesuture()
     updateRotateLockButtonImage()
+    addSettingButtonTapAction()
   }
   
   private func initBackgroundView() {
@@ -128,6 +129,25 @@ extension DigitClockViewController {
       action: #selector(DigitClockViewController.displayGestureForPanGestureRecognizer))
     view.addGestureRecognizer(pan)
   }
+  
+  func addSettingButtonTapAction() {
+    guard responds(to: #selector(presentSettingViewController(sender:))) else { return }
+    settingButton.addTarget(self,
+                            action: #selector(presentSettingViewController(sender:)),
+                            for: .touchUpInside)
+  }
+  
+  @objc func presentSettingViewController(sender: UIButton) {
+    let vc = Settings.ViewController.instance
+    vc.listener = self
+    let nc = UINavigationController(rootViewController: vc)
+    nc.modalPresentationStyle = .popover
+    nc.popoverPresentationController?.permittedArrowDirections = .any
+    nc.popoverPresentationController?.sourceView = self.view
+    nc.popoverPresentationController?.sourceRect = view.convert(sender.frame, from: sender.superview)
+      
+    present(nc, animated: true, completion: nil)
+  }
 }
 
 // MARK: View Handling
@@ -166,9 +186,9 @@ extension DigitClockViewController {
     }
   }
   
-  func updateBackground(theme: UIColor) {
-    asyncUI { self.view.backgroundColor = theme }
-    ThemeColor.sharedInstance.nowTheme = theme
+  func update(color: UIColor) {
+    asyncUI { self.view.backgroundColor = color }
+    ThemeColor.sharedInstance.nowTheme = color
     ThemeColor.storeThemeColor(theme: ThemeColor.sharedInstance)
   }
   
@@ -299,16 +319,16 @@ extension DigitClockViewController {
 
 // MARK: Segue
 extension DigitClockViewController {
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    guard
-      segue.identifier == "toSettingVC",
-      let destinationNavigationController = segue.destination as? UINavigationController,
-      let targetController =
-      destinationNavigationController.topViewController as? SettingTableViewController
-      else { return }
-    
-    targetController.delegate = self
-  }
+//  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//    guard
+//      segue.identifier == "toSettingVC",
+//      let destinationNavigationController = segue.destination as? UINavigationController,
+//      let targetController =
+//      destinationNavigationController.topViewController as? SettingTableViewController
+//      else { return }
+//
+//    targetController.delegate = self
+//  }
 }
 
 // MARK: Util Methods
