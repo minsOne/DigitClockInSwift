@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     func applicationDidFinishLaunching(_ application: UIApplication) {
         application.isIdleTimerDisabled = true
-        let a = DCAnalytics()
+        _ = DCAnalytics()
     }
 }
 
