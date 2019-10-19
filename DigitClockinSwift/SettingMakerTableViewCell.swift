@@ -10,8 +10,6 @@ import UIKit
 
 let makerCellIdentifier = "MakerCellId"
 
-class SettingMakerTableViewCell: SettingTableViewCell {
-
+final class SettingMakerTableViewCell: SettingTableViewCell {
   @IBOutlet weak var makerLabel: UILabel!
-
 }

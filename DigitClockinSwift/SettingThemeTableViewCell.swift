@@ -10,7 +10,7 @@ import UIKit
 
 let themeCellIdentifier = "ThemeCellId"
 
-class SettingThemeTableViewCell: SettingTableViewCell {
+final class SettingThemeTableViewCell: SettingTableViewCell {
     
     // MARK: Properties
     @IBOutlet var themeButtons: [UIButton]!
@@ -22,9 +22,9 @@ class SettingThemeTableViewCell: SettingTableViewCell {
 extension SettingThemeTableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.initThemeList()
-        self.adjustThemeInButton()
-        self.adjustTouchInButton()
+        initThemeList()
+        adjustThemeInButton()
+        adjustTouchInButton()
     }
 }
 

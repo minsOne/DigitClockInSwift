@@ -6,25 +6,12 @@
 	objectVersion = 50;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		CB2CD5B223483FF4005A8DE2 /* Aggregate */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = CB2CD5B323483FF4005A8DE2 /* Build configuration list for PBXAggregateTarget "Aggregate" */;
-			buildPhases = (
-				CB2CD5B623483FFA005A8DE2 /* ShellScript */,
-			);
-			dependencies = (
-			);
-			name = Aggregate;
-			productName = Aggregate;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		CB2CD59723483460005A8DE2 /* Librarys.h in Headers */ = {isa = PBXBuildFile; fileRef = CB2CD59523483460005A8DE2 /* Librarys.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB2CD5A223483811005A8DE2 /* Indicating.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2CD5A123483811005A8DE2 /* Indicating.swift */; };
 		CB2CD5AF23483DDB005A8DE2 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2CD5AE23483DDB005A8DE2 /* RxSwift.framework */; };
 		CB2CD5B023483DDB005A8DE2 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB2CD5AE23483DDB005A8DE2 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CBE1AA13235AAE2100AEA9F9 /* ClockDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1AA12235AAE2100AEA9F9 /* ClockDate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,6 +34,7 @@
 		CB2CD59623483460005A8DE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB2CD5A123483811005A8DE2 /* Indicating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indicating.swift; sourceTree = "<group>"; };
 		CB2CD5AE23483DDB005A8DE2 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		CBE1AA12235AAE2100AEA9F9 /* ClockDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockDate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +79,7 @@
 		CB2CD5A02348378F005A8DE2 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				CBE1AA12235AAE2100AEA9F9 /* ClockDate.swift */,
 				CB2CD5A123483811005A8DE2 /* Indicating.swift */,
 			);
 			path = Source;
@@ -151,9 +140,6 @@
 						CreatedOnToolsVersion = 11.0;
 						LastSwiftMigration = 1100;
 					};
-					CB2CD5B223483FF4005A8DE2 = {
-						CreatedOnToolsVersion = 11.0;
-					};
 				};
 			};
 			buildConfigurationList = CB2CD58C23483460005A8DE2 /* Build configuration list for PBXProject "Librarys" */;
@@ -170,7 +156,6 @@
 			projectRoot = "";
 			targets = (
 				CB2CD59123483460005A8DE2 /* Librarys */,
-				CB2CD5B223483FF4005A8DE2 /* Aggregate */,
 			);
 		};
 /* End PBXProject section */
@@ -205,23 +190,6 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\necho \"/usr/local/bin/carthage copy-frameworks\"\n#/usr/local/bin/carthage copy-frameworks\n";
 		};
-		CB2CD5B623483FFA005A8DE2 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "#!/bin/sh\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\n\nOUTPUT_FOLDER=${PROJECT_DIR}\n\n# make sure the output directory exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n# Step 1. Build Device and Simulator versions. This also include the full bitcode generation of framework\n\n\nxcodebuild BITCODE_GENERATION_MODE=bitcode OTHER_CFLAGS=\"-fembed-bitcode\" -workspace ${PROJECT_NAME}.xcworkspace -scheme ${PROJECT_NAME} ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" -UseModernBuildSystem=NO clean build\n\nxcodebuild BITCODE_GENERATION_MODE=bitcode OTHER_CFLAGS=\"-fembed-bitcode\" -workspace ${PROJECT_NAME}.xcworkspace -scheme ${PROJECT_NAME} ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphonesimulator BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" -UseModernBuildSystem=NO clean build\n\n\n# Step 2. Copy the framework structure (from iphoneos build) to the universal folder\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework\" \"${UNIVERSAL_OUTPUTFOLDER}/\"\n# Step 3. Copy Swift modules (from iphonesimulator build) to the copied framework directory\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule/.\" \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule\"\n# Step 4. Create universal binary file using lipo and place the combined executable in the copied framework directory\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework/${PROJECT_NAME}\"\n# Step 5. Convenience step to copy the framework to the project's directory\ncp -R \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework\" \"${OUTPUT_FOLDER}\"\n# Step 6. Convenience step to open the project's directory in Finder\nopen \"${OUTPUT_FOLDER}\"\n";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -229,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBE1AA13235AAE2100AEA9F9 /* ClockDate.swift in Sources */,
 				CB2CD5A223483811005A8DE2 /* Indicating.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,24 +398,6 @@
 			};
 			name = Release;
 		};
-		CB2CD5B423483FF4005A8DE2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6794ZU679A;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		CB2CD5B523483FF4005A8DE2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6794ZU679A;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -464,15 +415,6 @@
 			buildConfigurations = (
 				CB2CD59B23483460005A8DE2 /* Debug */,
 				CB2CD59C23483460005A8DE2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CB2CD5B323483FF4005A8DE2 /* Build configuration list for PBXAggregateTarget "Aggregate" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CB2CD5B423483FF4005A8DE2 /* Debug */,
-				CB2CD5B523483FF4005A8DE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

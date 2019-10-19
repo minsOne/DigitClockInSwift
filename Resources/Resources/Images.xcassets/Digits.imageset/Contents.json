@@ -2,13 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "theme6.png"
+      "filename" : "Digits.png",
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x",
-      "filename" : "theme6@2x.png"
+      "scale" : "2x"
     },
     {
       "idiom" : "universal",

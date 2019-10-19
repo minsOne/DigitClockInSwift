@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import Resources
+import Librarys
 
-enum ImageName: String {
-  case Digits = "Digits"
+private enum ImageName: String {
   case RotationLock = "rotation_lock"
   case RotationUnLock = "rotation_unlock"
 }
@@ -19,21 +20,21 @@ let spaceViewAlpha: CGFloat = 0.5
 class DigitClockViewController: UIViewController {
   
   // MARK: Properties
-  @IBOutlet weak var weekView: UIView!
-  @IBOutlet weak var spaceView: UIView!
-  @IBOutlet weak var timeView: UIView!
+  @IBOutlet private weak var weekView: UIView!
+  @IBOutlet private weak var spaceView: UIView!
+  @IBOutlet private weak var timeView: UIView!
   
-  @IBOutlet var weekLabels: [UILabel]!
-  @IBOutlet var timeImageViews: [UIImageView]!
-  @IBOutlet var colonImageViews: [UIImageView]!
+  @IBOutlet private var weekLabels: [UILabel]!
+  @IBOutlet private var timeImageViews: [UIImageView]!
+  @IBOutlet private var colonImageViews: [UIImageView]!
   
-  @IBOutlet weak var rotationButton: UIButton!
-  @IBOutlet weak var settingButton: UIButton!
+  @IBOutlet private weak var rotationButton: UIButton!
+  @IBOutlet private weak var settingButton: UIButton!
   
-  weak var timeViewtimer: Timer?
-  weak var spaceViewTimer: Timer?
+  private weak var timeViewtimer: Timer?
+  private weak var spaceViewTimer: Timer?
   
-  var lastTranslation: CGPoint?
+  private var lastTranslation: CGPoint?
   
   var isRotate: Bool = true {
     didSet { self.updateRotateLockButtonImage() }
@@ -74,7 +75,7 @@ extension DigitClockViewController {
     addPanGesuture()
   }
   
-  func initBackgroundView() {
+  private func initBackgroundView() {
     let theme = ThemeColor.initialThemeColor()
     if let nowTheme = theme.nowTheme {
       view.backgroundColor = nowTheme
@@ -85,20 +86,20 @@ extension DigitClockViewController {
     }
   }
   
-  func initTimeView() {
+  private func initTimeView() {
     let f = setDigitImageLayer
     timeImageViews.forEach { f(0, $0) }
   }
   
-  func initColonView() {
+  private func initColonView() {
     let f = setDigitImageLayer
     colonImageViews.forEach { f(10, $0) }
   }
   
-  func initWeekLabel() {
+  private func initWeekLabel() {
     var count = 1
     
-    weekday = Date.getNowDate().weekday
+    weekday = ClockDate.now.weekday
     weekLabels.forEach { label in
       label.tag = count
       label.alpha = (label.tag == self.weekday) ? 1.0 : 0.2
@@ -176,7 +177,7 @@ extension DigitClockViewController {
   }
   
   func setDigitImageLayer(xPosition: Int, forView view: UIImageView) {
-    view.image = UIImage(named: ImageName.Digits.rawValue)
+    view.image = R.Image.digits
     view.layer.contentsGravity = CALayerContentsGravity.resizeAspect
     view.layer.magnificationFilter = .nearest
     
@@ -261,7 +262,7 @@ extension DigitClockViewController {
   }
   
   @objc func tick() {
-    let date = Date.getNowDate()
+    let date = ClockDate.now
     self.weekday = date.weekday
     
     UIView.animate(withDuration: 1.0) {
