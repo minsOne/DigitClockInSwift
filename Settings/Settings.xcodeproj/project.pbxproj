@@ -22,7 +22,7 @@
 		CBE1AAB8235AD97500AEA9F9 /* SettingMakerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1AAB3235AD97400AEA9F9 /* SettingMakerTableViewCell.swift */; };
 		CBE1AAB9235AD97500AEA9F9 /* SettingVersionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1AAB4235AD97400AEA9F9 /* SettingVersionTableViewCell.swift */; };
 		CBE1AABA235AD97500AEA9F9 /* SettingThemeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1AAB5235AD97400AEA9F9 /* SettingThemeTableViewCell.swift */; };
-		CBE1AAC4235ADD3000AEA9F9 /* ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBE1AAC3235ADD3000AEA9F9 /* ViewController.storyboard */; };
+		CBE1AAC4235ADD3000AEA9F9 /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBE1AAC3235ADD3000AEA9F9 /* SettingsViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +75,7 @@
 		CBE1AAB4235AD97400AEA9F9 /* SettingVersionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVersionTableViewCell.swift; sourceTree = "<group>"; };
 		CBE1AAB5235AD97400AEA9F9 /* SettingThemeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingThemeTableViewCell.swift; sourceTree = "<group>"; };
 		CBE1AAB6235AD97500AEA9F9 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
-		CBE1AAC3235ADD3000AEA9F9 /* ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ViewController.storyboard; sourceTree = "<group>"; };
+		CBE1AAC3235ADD3000AEA9F9 /* SettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,7 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				CBE1AAB1235AD76000AEA9F9 /* ViewController.swift */,
-				CBE1AAC3235ADD3000AEA9F9 /* ViewController.storyboard */,
+				CBE1AAC3235ADD3000AEA9F9 /* SettingsViewController.storyboard */,
 				CBE1AAB5235AD97400AEA9F9 /* SettingThemeTableViewCell.swift */,
 				CBE1AAB3235AD97400AEA9F9 /* SettingMakerTableViewCell.swift */,
 				CBE1AAB4235AD97400AEA9F9 /* SettingVersionTableViewCell.swift */,
@@ -313,7 +313,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBE1AAC4235ADD3000AEA9F9 /* ViewController.storyboard in Resources */,
+				CBE1AAC4235ADD3000AEA9F9 /* SettingsViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,6 +561,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = kr.minsOne.DigitClock.Settings;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -587,6 +588,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = kr.minsOne.DigitClock.Settings;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

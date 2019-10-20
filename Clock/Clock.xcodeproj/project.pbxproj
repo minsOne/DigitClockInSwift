@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB6190E8235B312400E18C55 /* ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB6190E6235B310100E18C55 /* ViewController.storyboard */; };
+		CB6190E8235B312400E18C55 /* ClockViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB6190E6235B310100E18C55 /* ClockViewController.storyboard */; };
 		CB6190E9235B315C00E18C55 /* Clock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC6BFA7235B2A49007D8BAA /* Clock.framework */; };
 		CB6190EA235B315C00E18C55 /* Clock.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CBC6BFA7235B2A49007D8BAA /* Clock.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CBC6BFB1235B2A49007D8BAA /* Clock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC6BFA7235B2A49007D8BAA /* Clock.framework */; };
@@ -54,7 +54,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		CB6190E7235B310100E18C55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ViewController.storyboard; sourceTree = "<group>"; };
+		CB6190E7235B310100E18C55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ClockViewController.storyboard; sourceTree = "<group>"; };
 		CBC6BFA7235B2A49007D8BAA /* Clock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Clock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC6BFAA235B2A49007D8BAA /* Clock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Clock.h; sourceTree = "<group>"; };
 		CBC6BFAB235B2A49007D8BAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -145,7 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				CBC6BFC2235B2A6C007D8BAA /* ViewController.swift */,
-				CB6190E6235B310100E18C55 /* ViewController.storyboard */,
+				CB6190E6235B310100E18C55 /* ClockViewController.storyboard */,
 				CBF75BD6235B2BB9006DE7A1 /* ColorStorageService.swift */,
 			);
 			path = Source;
@@ -287,7 +287,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB6190E8235B312400E18C55 /* ViewController.storyboard in Resources */,
+				CB6190E8235B312400E18C55 /* ClockViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,12 +351,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CB6190E6235B310100E18C55 /* ViewController.storyboard */ = {
+		CB6190E6235B310100E18C55 /* ClockViewController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				CB6190E7235B310100E18C55 /* Base */,
 			);
-			name = ViewController.storyboard;
+			name = ClockViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		CBF75C05235B2F16006DE7A1 /* LaunchScreen.storyboard */ = {
@@ -507,6 +507,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = kr.minsOne.DigitClock.Clock;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -533,6 +534,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = kr.minsOne.DigitClock.Clock;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

@@ -15,7 +15,7 @@ public protocol Listener: AnyObject {
 }
 
 final public class ViewController: UITableViewController, SettingTableViewCellPresenterListener, Instantiable {
-    public static var storyboardName: String { "ViewController" }
+    public static var storyboardName: String { "SettingsViewController" }
     
     
     // MARK: Properties
@@ -77,7 +77,7 @@ final public class ViewController: UITableViewController, SettingTableViewCellPr
                 as! SettingVersionTableViewCell
             
             let versionCell = cell as! SettingVersionTableViewCell
-            let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
+            let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
             
             versionCell.versionLabel.text = "Version : " + version
         default:

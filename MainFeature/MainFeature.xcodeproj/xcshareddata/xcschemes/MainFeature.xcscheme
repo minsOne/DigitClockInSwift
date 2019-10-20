@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CB999AFE1AE78E6300CDB674"
-               BuildableName = "DigitClockinSwift.app"
-               BlueprintName = "DigitClockinSwift"
-               ReferencedContainer = "container:DigitClockinSwift.xcodeproj">
+               BlueprintIdentifier = "CB6190F7235B53C500E18C55"
+               BuildableName = "MainFeature.framework"
+               BlueprintName = "MainFeature"
+               ReferencedContainer = "container:MainFeature.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,16 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CB999B131AE78E6300CDB674"
-               BuildableName = "DigitClockinSwiftTests.xctest"
-               BlueprintName = "DigitClockinSwiftTests"
-               ReferencedContainer = "container:DigitClockinSwift.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -50,22 +40,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CB999AFE1AE78E6300CDB674"
-            BuildableName = "DigitClockinSwift.app"
-            BlueprintName = "DigitClockinSwift"
-            ReferencedContainer = "container:DigitClockinSwift.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
-      <CommandLineArguments>
-         <CommandLineArgument
-            argument = "-FIRAnalyticsDebugEnabled"
-            isEnabled = "YES">
-         </CommandLineArgument>
-      </CommandLineArguments>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -73,16 +47,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CB999AFE1AE78E6300CDB674"
-            BuildableName = "DigitClockinSwift.app"
-            BlueprintName = "DigitClockinSwift"
-            ReferencedContainer = "container:DigitClockinSwift.xcodeproj">
+            BlueprintIdentifier = "CB6190F7235B53C500E18C55"
+            BuildableName = "MainFeature.framework"
+            BlueprintName = "MainFeature"
+            ReferencedContainer = "container:MainFeature.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

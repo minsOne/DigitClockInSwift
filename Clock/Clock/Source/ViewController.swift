@@ -14,7 +14,7 @@ import Settings
 private let spaceViewAlpha: CGFloat = 0.5
 
 final public class ViewController: UIViewController, Instantiable, Settings.Listener {
-    public static var storyboardName: String { "ViewController" }
+    public static var storyboardName: String { "ClockViewController" }
     
     // MARK: Properties
     @IBOutlet private weak var weekView: UIView!
