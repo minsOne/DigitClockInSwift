@@ -7,11 +7,3 @@
 //
 
 import Foundation
-import Settings
-import Clock
-
-func A() {
-    print(Settings.ViewController.self)
-    print(Clock.ViewController.self)
-    print("Hello world")
-}
