@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB061477237FBC7D00EBDBCE /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB061476237FBC7D00EBDBCE /* RxSwift.framework */; };
 		CBE1AA2B235AB31C00AEA9F9 /* Library.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE1AA21235AB31C00AEA9F9 /* Library.framework */; };
 		CBE1AA30235AB31C00AEA9F9 /* LibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1AA2F235AB31C00AEA9F9 /* LibraryTests.swift */; };
 		CBE1AA32235AB31C00AEA9F9 /* Library.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE1AA24235AB31C00AEA9F9 /* Library.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB061476237FBC7D00EBDBCE /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		CBE1AA21235AB31C00AEA9F9 /* Library.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Library.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBE1AA24235AB31C00AEA9F9 /* Library.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Library.h; sourceTree = "<group>"; };
 		CBE1AA25235AB31C00AEA9F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -42,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB061477237FBC7D00EBDBCE /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +59,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB061475237FBC7C00EBDBCE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB061476237FBC7D00EBDBCE /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CBE1AA17235AB31C00AEA9F9 = {
 			isa = PBXGroup;
 			children = (
 				CBE1AA23235AB31C00AEA9F9 /* Library */,
 				CBE1AA2E235AB31C00AEA9F9 /* LibraryTests */,
 				CBE1AA22235AB31C00AEA9F9 /* Products */,
+				CB061475237FBC7C00EBDBCE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -358,6 +370,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Carthage/Build/iOS";
 				INFOPLIST_FILE = Library/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -382,6 +395,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Carthage/Build/iOS";
 				INFOPLIST_FILE = Library/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
