@@ -8,7 +8,7 @@
 
 import UIKit
 import Analytics
-import Clock
+import MainFeature.Clock
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

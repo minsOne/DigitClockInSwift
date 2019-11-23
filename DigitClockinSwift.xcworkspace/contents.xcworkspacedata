@@ -7,12 +7,6 @@
       <FileRef
          location = "group:MainFeature/MainFeature.xcodeproj">
       </FileRef>
-      <FileRef
-         location = "group:Settings/Settings.xcodeproj">
-      </FileRef>
-      <FileRef
-         location = "group:Clock/Clock.xcodeproj">
-      </FileRef>
    </Group>
    <FileRef
       location = "group:Library/Library.xcodeproj">

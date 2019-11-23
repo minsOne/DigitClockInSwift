@@ -1,0 +1,11 @@
+framework module MainFeature {
+  umbrella header "MainFeature.h"
+
+  explicit module Clock {
+      export *
+  }
+  explicit module Settings {
+      export *
+  }
+  module * { export * }
+}

@@ -20,8 +20,6 @@
 		CBFADB38235BFC4500F01E39 /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBFADB37235BFC4500F01E39 /* SettingsViewController.storyboard */; };
 		CBFADB39235BFD5A00F01E39 /* MainFeature.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6190F8235B53C500E18C55 /* MainFeature.framework */; };
 		CBFADB3A235BFD5A00F01E39 /* MainFeature.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB6190F8235B53C500E18C55 /* MainFeature.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CBFADB3B235BFE4D00F01E39 /* Clock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB619107235B541800E18C55 /* Clock.framework */; };
-		CBFADB3E235BFE4F00F01E39 /* Settings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB619108235B541800E18C55 /* Settings.framework */; };
 		CBFADB42235C00BA00F01E39 /* ClockViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBFADB40235C00AE00F01E39 /* ClockViewController.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +30,34 @@
 			proxyType = 1;
 			remoteGlobalIDString = CB6190F7235B53C500E18C55;
 			remoteInfo = MainFeature;
+		};
+		CBD378E92388F35A006B0EBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBD378E52388F359006B0EBD /* Settings.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CBD378DA2388F359006B0EBD;
+			remoteInfo = Settings;
+		};
+		CBD378F82388F390006B0EBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBD378E52388F359006B0EBD /* Settings.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = CBD378D92388F359006B0EBD;
+			remoteInfo = Settings;
+		};
+		CBD379132388F3BE006B0EBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBD3790F2388F3BD006B0EBD /* Clock.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CBD379042388F3BD006B0EBD;
+			remoteInfo = Clock;
+		};
+		CBD379282388F485006B0EBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBD3790F2388F3BD006B0EBD /* Clock.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = CBD379032388F3BD006B0EBD;
+			remoteInfo = Clock;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -66,6 +92,9 @@
 		CB619133235B581700E18C55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB619145235B5C5A00E18C55 /* Library.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Library.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB619146235B5C5A00E18C55 /* Resources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Resources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBD378E52388F359006B0EBD /* Settings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Settings.xcodeproj; path = Settings/Settings.xcodeproj; sourceTree = "<group>"; };
+		CBD3790F2388F3BD006B0EBD /* Clock.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Clock.xcodeproj; path = Clock/Clock.xcodeproj; sourceTree = "<group>"; };
+		CBD3792F2388FC50006B0EBD /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		CBFADB37235BFC4500F01E39 /* SettingsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
 		CBFADB41235C00AE00F01E39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ClockViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,8 +104,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBFADB3B235BFE4D00F01E39 /* Clock.framework in Frameworks */,
-				CBFADB3E235BFE4F00F01E39 /* Settings.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,9 +142,11 @@
 		CB6190FA235B53C500E18C55 /* MainFeature */ = {
 			isa = PBXGroup;
 			children = (
+				CBD378CF2388F2E0006B0EBD /* Dependencies */,
 				CB6190FB235B53C500E18C55 /* MainFeature.h */,
 				CB6190FC235B53C500E18C55 /* Info.plist */,
 				CB61910E235B54F300E18C55 /* MainFeature.swift */,
+				CBD3792F2388FC50006B0EBD /* module.modulemap */,
 				CBFADB36235BFC3A00F01E39 /* Source */,
 			);
 			path = MainFeature;
@@ -152,6 +181,31 @@
 				CB61912E235B581700E18C55 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CBD378CF2388F2E0006B0EBD /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				CBD3790F2388F3BD006B0EBD /* Clock.xcodeproj */,
+				CBD378E52388F359006B0EBD /* Settings.xcodeproj */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		CBD378E62388F359006B0EBD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CBD378EA2388F35A006B0EBD /* Settings.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CBD379102388F3BD006B0EBD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CBD379142388F3BE006B0EBD /* Clock.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		CBFADB36235BFC3A00F01E39 /* Source */ = {
@@ -189,6 +243,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				CBD379292388F485006B0EBD /* PBXTargetDependency */,
+				CBD378F92388F390006B0EBD /* PBXTargetDependency */,
 			);
 			name = MainFeature;
 			productName = MainFeature;
@@ -245,6 +301,16 @@
 			mainGroup = CB6190EE235B53C500E18C55;
 			productRefGroup = CB6190F9235B53C500E18C55 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CBD379102388F3BD006B0EBD /* Products */;
+					ProjectRef = CBD3790F2388F3BD006B0EBD /* Clock.xcodeproj */;
+				},
+				{
+					ProductGroup = CBD378E62388F359006B0EBD /* Products */;
+					ProjectRef = CBD378E52388F359006B0EBD /* Settings.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				CB6190F7235B53C500E18C55 /* MainFeature */,
@@ -252,6 +318,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CBD378EA2388F35A006B0EBD /* Settings.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Settings.framework;
+			remoteRef = CBD378E92388F35A006B0EBD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CBD379142388F3BE006B0EBD /* Clock.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Clock.framework;
+			remoteRef = CBD379132388F3BE006B0EBD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CB6190F6235B53C500E18C55 /* Resources */ = {
@@ -299,6 +382,16 @@
 			isa = PBXTargetDependency;
 			target = CB6190F7235B53C500E18C55 /* MainFeature */;
 			targetProxy = CB619139235B583300E18C55 /* PBXContainerItemProxy */;
+		};
+		CBD378F92388F390006B0EBD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Settings;
+			targetProxy = CBD378F82388F390006B0EBD /* PBXContainerItemProxy */;
+		};
+		CBD379292388F485006B0EBD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Clock;
+			targetProxy = CBD379282388F485006B0EBD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -460,6 +553,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = mh_dylib;
+				MODULEMAP_FILE = MainFeature/module.modulemap;
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = kr.minsOne.DigitClock.MainFeature;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -489,6 +583,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = mh_dylib;
+				MODULEMAP_FILE = MainFeature/module.modulemap;
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = kr.minsOne.DigitClock.MainFeature;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
