@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB061477237FBC7D00EBDBCE /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB061476237FBC7D00EBDBCE /* RxSwift.framework */; };
 		CBE1AA2B235AB31C00AEA9F9 /* Library.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE1AA21235AB31C00AEA9F9 /* Library.framework */; };
 		CBE1AA30235AB31C00AEA9F9 /* LibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1AA2F235AB31C00AEA9F9 /* LibraryTests.swift */; };
 		CBE1AA32235AB31C00AEA9F9 /* Library.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE1AA24235AB31C00AEA9F9 /* Library.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -44,7 +43,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB061477237FBC7D00EBDBCE /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
