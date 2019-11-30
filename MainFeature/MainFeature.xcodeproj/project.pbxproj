@@ -17,6 +17,9 @@
 		CB619148235B5C5A00E18C55 /* Library.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB619145235B5C5A00E18C55 /* Library.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB619149235B5C5A00E18C55 /* Resources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB619146235B5C5A00E18C55 /* Resources.framework */; };
 		CB61914A235B5C5A00E18C55 /* Resources.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB619146235B5C5A00E18C55 /* Resources.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CBAE57FA23928674004DE131 /* RIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAE57F723928674004DE131 /* RIBs.framework */; };
+		CBAE57FC23928674004DE131 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAE57F823928674004DE131 /* RxSwift.framework */; };
+		CBAE57FE23928674004DE131 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAE57F923928674004DE131 /* RxRelay.framework */; };
 		CBFADB38235BFC4500F01E39 /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBFADB37235BFC4500F01E39 /* SettingsViewController.storyboard */; };
 		CBFADB39235BFD5A00F01E39 /* MainFeature.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6190F8235B53C500E18C55 /* MainFeature.framework */; };
 		CBFADB3A235BFD5A00F01E39 /* MainFeature.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB6190F8235B53C500E18C55 /* MainFeature.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -92,6 +95,9 @@
 		CB619133235B581700E18C55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB619145235B5C5A00E18C55 /* Library.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Library.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB619146235B5C5A00E18C55 /* Resources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Resources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBAE57F723928674004DE131 /* RIBs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RIBs.framework; path = ../Carthage/Build/iOS/RIBs.framework; sourceTree = "<group>"; };
+		CBAE57F823928674004DE131 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		CBAE57F923928674004DE131 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = ../Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		CBD378E52388F359006B0EBD /* Settings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Settings.xcodeproj; path = Settings/Settings.xcodeproj; sourceTree = "<group>"; };
 		CBD3790F2388F3BD006B0EBD /* Clock.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Clock.xcodeproj; path = Clock/Clock.xcodeproj; sourceTree = "<group>"; };
 		CBD3792F2388FC50006B0EBD /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
@@ -104,6 +110,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBAE57FC23928674004DE131 /* RxSwift.framework in Frameworks */,
+				CBAE57FA23928674004DE131 /* RIBs.framework in Frameworks */,
+				CBAE57FE23928674004DE131 /* RxRelay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +164,9 @@
 		CB619106235B541800E18C55 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CBAE57F723928674004DE131 /* RIBs.framework */,
+				CBAE57F923928674004DE131 /* RxRelay.framework */,
+				CBAE57F823928674004DE131 /* RxSwift.framework */,
 				CB619145235B5C5A00E18C55 /* Library.framework */,
 				CB619146235B5C5A00E18C55 /* Resources.framework */,
 				CB619107235B541800E18C55 /* Clock.framework */,
@@ -545,6 +557,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = MainFeature/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -575,6 +592,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = MainFeature/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (

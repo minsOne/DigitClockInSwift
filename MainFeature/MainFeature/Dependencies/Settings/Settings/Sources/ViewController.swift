@@ -7,14 +7,16 @@
 //
 
 import Foundation
+import RIBs
+import RxSwift
 import UIKit
 import Library
 
-public protocol Listener: AnyObject {
+public protocol PresentableListener: class {
     func update(color: UIColor)
 }
 
-final public class ViewController: UITableViewController, SettingTableViewCellPresenterListener, Instantiable {
+final public class ViewController: UITableViewController, SettingTableViewCellPresenterListener, Instantiable, Presentable, ViewControllable {
     public static var storyboardName: String { "SettingsViewController" }
     
     
@@ -24,7 +26,7 @@ final public class ViewController: UITableViewController, SettingTableViewCellPr
     private let makerTexts = ["Developer : Ahn Jung Min",
                               "Designer : Joo Sung Hyun"]
 
-    public weak var listener: Listener?
+    public weak var listener: PresentableListener?
     
     override public var prefersStatusBarHidden: Bool { true }
     

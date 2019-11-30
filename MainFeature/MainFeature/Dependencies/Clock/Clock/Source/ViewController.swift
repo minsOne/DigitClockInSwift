@@ -14,7 +14,7 @@ import ClockTimer
 
 private let spaceViewAlpha: CGFloat = 0.5
 
-final public class ViewController: UIViewController, Instantiable, Settings.Listener {
+final public class ViewController: UIViewController, Instantiable { //}, Settings.Listener {
     public static var storyboardName: String { "ClockViewController" }
     
     // MARK: Properties
@@ -146,7 +146,7 @@ extension ViewController {
     
     @objc func presentSettingViewController(sender: UIButton) {
         let vc = Settings.ViewController.instance
-        vc.listener = self
+//        vc.listener = self
         let nc = UINavigationController(rootViewController: vc)
         nc.modalPresentationStyle = .popover
         nc.popoverPresentationController?.permittedArrowDirections = .any

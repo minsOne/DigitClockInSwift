@@ -20,6 +20,8 @@
 		CBAE57D9239282FA004DE131 /* RIBs.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CBAE57D6239282FA004DE131 /* RIBs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CBAE57DA239282FA004DE131 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAE57D7239282FA004DE131 /* RxSwift.framework */; };
 		CBAE57DB239282FA004DE131 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CBAE57D7239282FA004DE131 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CBAE57F123928592004DE131 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAE57F023928592004DE131 /* RxRelay.framework */; };
+		CBAE57F223928592004DE131 /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CBAE57F023928592004DE131 /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CBE1AA10235AADF100AEA9F9 /* Resources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE1AA0F235AADF100AEA9F9 /* Resources.framework */; };
 		CBE1AA11235AADF100AEA9F9 /* Resources.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CBE1AA0F235AADF100AEA9F9 /* Resources.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CBE1AA3E235AB34500AEA9F9 /* Library.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE1AA3D235AB34500AEA9F9 /* Library.framework */; };
@@ -48,7 +50,7 @@
 		};
 		CB68BAE8233F525700B08DC9 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
@@ -56,11 +58,12 @@
 				CBE1AA11235AADF100AEA9F9 /* Resources.framework in Embed Frameworks */,
 				CBAE57DB239282FA004DE131 /* RxSwift.framework in Embed Frameworks */,
 				CBAE57D9239282FA004DE131 /* RIBs.framework in Embed Frameworks */,
+				CBAE57F223928592004DE131 /* RxRelay.framework in Embed Frameworks */,
 				CB68BAE7233F525700B08DC9 /* Analytics.framework in Embed Frameworks */,
 				CB619105235B53FC00E18C55 /* MainFeature.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -78,6 +81,7 @@
 		CB999B1A1AE78E6300CDB674 /* DigitClockinSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitClockinSwiftTests.swift; sourceTree = "<group>"; };
 		CBAE57D6239282FA004DE131 /* RIBs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RIBs.framework; path = Carthage/Build/iOS/RIBs.framework; sourceTree = SOURCE_ROOT; };
 		CBAE57D7239282FA004DE131 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = SOURCE_ROOT; };
+		CBAE57F023928592004DE131 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = SOURCE_ROOT; };
 		CBC6BF80235AEE01007D8BAA /* Settings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Settings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBE1AA0F235AADF100AEA9F9 /* Resources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Resources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBE1AA3D235AB34500AEA9F9 /* Library.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Library.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +97,7 @@
 				CBE1AA10235AADF100AEA9F9 /* Resources.framework in Frameworks */,
 				CBAE57DA239282FA004DE131 /* RxSwift.framework in Frameworks */,
 				CBAE57D8239282FA004DE131 /* RIBs.framework in Frameworks */,
+				CBAE57F123928592004DE131 /* RxRelay.framework in Frameworks */,
 				CB68BAE6233F525700B08DC9 /* Analytics.framework in Frameworks */,
 				CB619104235B53FC00E18C55 /* MainFeature.framework in Frameworks */,
 			);
@@ -111,6 +116,7 @@
 		CB68BA33233F42A800B08DC9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CBAE57F023928592004DE131 /* RxRelay.framework */,
 				CBAE57D6239282FA004DE131 /* RIBs.framework */,
 				CBAE57D7239282FA004DE131 /* RxSwift.framework */,
 				CB619103235B53FC00E18C55 /* MainFeature.framework */,

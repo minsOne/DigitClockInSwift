@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CBAE57E4239283A3004DE131 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAE57E0239283A3004DE131 /* Router.swift */; };
+		CBAE57E6239283A3004DE131 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAE57E2239283A3004DE131 /* Builder.swift */; };
+		CBAE57E7239283A3004DE131 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAE57E3239283A3004DE131 /* Interactor.swift */; };
+		CBAE57EB239283ED004DE131 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAE57E9239283ED004DE131 /* RxSwift.framework */; };
+		CBAE57ED239283ED004DE131 /* RIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAE57EA239283ED004DE131 /* RIBs.framework */; };
+		CBAE57F4239285BF004DE131 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAE57F3239285BF004DE131 /* RxRelay.framework */; };
 		CBD378DF2388F359006B0EBD /* Settings.h in Headers */ = {isa = PBXBuildFile; fileRef = CBD378DD2388F359006B0EBD /* Settings.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBD378F22388F383006B0EBD /* SettingMakerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD378EC2388F383006B0EBD /* SettingMakerTableViewCell.swift */; };
 		CBD378F32388F383006B0EBD /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD378ED2388F383006B0EBD /* SettingTableViewCell.swift */; };
@@ -17,6 +23,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CBAE57E0239283A3004DE131 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		CBAE57E2239283A3004DE131 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		CBAE57E3239283A3004DE131 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		CBAE57E9239283ED004DE131 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../../../../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		CBAE57EA239283ED004DE131 /* RIBs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RIBs.framework; path = ../../../../Carthage/Build/iOS/RIBs.framework; sourceTree = "<group>"; };
+		CBAE57F3239285BF004DE131 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = ../../../../Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		CBD378DA2388F359006B0EBD /* Settings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Settings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD378DD2388F359006B0EBD /* Settings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		CBD378DE2388F359006B0EBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -33,6 +45,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBAE57ED239283ED004DE131 /* RIBs.framework in Frameworks */,
+				CBAE57EB239283ED004DE131 /* RxSwift.framework in Frameworks */,
+				CBAE57F4239285BF004DE131 /* RxRelay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,11 +65,22 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		CBAE57E8239283ED004DE131 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CBAE57F3239285BF004DE131 /* RxRelay.framework */,
+				CBAE57EA239283ED004DE131 /* RIBs.framework */,
+				CBAE57E9239283ED004DE131 /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CBD378D02388F359006B0EBD = {
 			isa = PBXGroup;
 			children = (
 				CBD378DC2388F359006B0EBD /* Settings */,
 				CBD378DB2388F359006B0EBD /* Products */,
+				CBAE57E8239283ED004DE131 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,6 +106,9 @@
 			isa = PBXGroup;
 			children = (
 				CBD378EF2388F383006B0EBD /* ViewController.swift */,
+				CBAE57E0239283A3004DE131 /* Router.swift */,
+				CBAE57E2239283A3004DE131 /* Builder.swift */,
+				CBAE57E3239283A3004DE131 /* Interactor.swift */,
 				CBD378EE2388F383006B0EBD /* SettingsViewController.storyboard */,
 				CBAE57DC23928307004DE131 /* Cell */,
 			);
@@ -168,9 +197,12 @@
 			files = (
 				CBD378F52388F383006B0EBD /* ViewController.swift in Sources */,
 				CBD378F32388F383006B0EBD /* SettingTableViewCell.swift in Sources */,
+				CBAE57E7239283A3004DE131 /* Interactor.swift in Sources */,
+				CBAE57E4239283A3004DE131 /* Router.swift in Sources */,
 				CBD378F62388F383006B0EBD /* SettingThemeTableViewCell.swift in Sources */,
 				CBD378F22388F383006B0EBD /* SettingMakerTableViewCell.swift in Sources */,
 				CBD378F72388F383006B0EBD /* SettingVersionTableViewCell.swift in Sources */,
+				CBAE57E6239283A3004DE131 /* Builder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +246,11 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -277,6 +314,11 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
