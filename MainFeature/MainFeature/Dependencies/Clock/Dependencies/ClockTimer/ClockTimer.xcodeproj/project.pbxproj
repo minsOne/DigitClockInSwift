@@ -7,162 +7,117 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CBD379092388F3BD006B0EBD /* Clock.h in Headers */ = {isa = PBXBuildFile; fileRef = CBD379072388F3BD006B0EBD /* Clock.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CBD379232388F454006B0EBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD379222388F454006B0EBD /* ViewController.swift */; };
-		CBD379272388F458006B0EBD /* ColorStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD379262388F458006B0EBD /* ColorStorageService.swift */; };
-		CBD3792C2388F4BC006B0EBD /* Settings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD3792B2388F4BC006B0EBD /* Settings.framework */; };
+		CBD383B923924D74004EEAB4 /* ClockTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = CBD383B723924D74004EEAB4 /* ClockTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBD383C923924DAF004EEAB4 /* Library.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD383C823924DAF004EEAB4 /* Library.framework */; };
+		CBD383CD23924DF5004EEAB4 /* ClockScheduledTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD383CC23924DF5004EEAB4 /* ClockScheduledTimer.swift */; };
+		CBD383D1239253E9004EEAB4 /* SpaceViewScheduledTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD383D0239253E9004EEAB4 /* SpaceViewScheduledTimer.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		CBD383C323924D75004EEAB4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CBD383BF23924D74004EEAB4 /* ClockTimer.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CBD383B423924D74004EEAB4;
-			remoteInfo = ClockTimer;
-		};
-		CBD383C523924D99004EEAB4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CBD383BF23924D74004EEAB4 /* ClockTimer.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = CBD383B323924D74004EEAB4;
-			remoteInfo = ClockTimer;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		CBD379042388F3BD006B0EBD /* Clock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Clock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CBD379072388F3BD006B0EBD /* Clock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Clock.h; sourceTree = "<group>"; };
-		CBD379082388F3BD006B0EBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CBD379222388F454006B0EBD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CBD379252388F458006B0EBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ClockViewController.storyboard; sourceTree = "<group>"; };
-		CBD379262388F458006B0EBD /* ColorStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorStorageService.swift; sourceTree = "<group>"; };
-		CBD3792B2388F4BC006B0EBD /* Settings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Settings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CBD383BF23924D74004EEAB4 /* ClockTimer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ClockTimer.xcodeproj; path = ClockTimer/ClockTimer.xcodeproj; sourceTree = "<group>"; };
+		CBD383B423924D74004EEAB4 /* ClockTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ClockTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBD383B723924D74004EEAB4 /* ClockTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClockTimer.h; sourceTree = "<group>"; };
+		CBD383B823924D74004EEAB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBD383C823924DAF004EEAB4 /* Library.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Library.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBD383CC23924DF5004EEAB4 /* ClockScheduledTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockScheduledTimer.swift; sourceTree = "<group>"; };
+		CBD383D0239253E9004EEAB4 /* SpaceViewScheduledTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceViewScheduledTimer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CBD379012388F3BD006B0EBD /* Frameworks */ = {
+		CBD383B123924D74004EEAB4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBD3792C2388F4BC006B0EBD /* Settings.framework in Frameworks */,
+				CBD383C923924DAF004EEAB4 /* Library.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CBD378FA2388F3BD006B0EBD = {
+		CBD383AA23924D74004EEAB4 = {
 			isa = PBXGroup;
 			children = (
-				CBD379062388F3BD006B0EBD /* Clock */,
-				CBD3838E23924CF5004EEAB4 /* Dependencies */,
-				CBD379052388F3BD006B0EBD /* Products */,
-				CBD3792A2388F4BC006B0EBD /* Frameworks */,
+				CBD383B623924D74004EEAB4 /* ClockTimer */,
+				CBD383B523924D74004EEAB4 /* Products */,
+				CBD383C723924DAE004EEAB4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		CBD379052388F3BD006B0EBD /* Products */ = {
+		CBD383B523924D74004EEAB4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CBD379042388F3BD006B0EBD /* Clock.framework */,
+				CBD383B423924D74004EEAB4 /* ClockTimer.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CBD379062388F3BD006B0EBD /* Clock */ = {
+		CBD383B623924D74004EEAB4 /* ClockTimer */ = {
 			isa = PBXGroup;
 			children = (
-				CBD379152388F40C006B0EBD /* Source */,
-				CBD379072388F3BD006B0EBD /* Clock.h */,
-				CBD379082388F3BD006B0EBD /* Info.plist */,
+				CBD383B723924D74004EEAB4 /* ClockTimer.h */,
+				CBD383CC23924DF5004EEAB4 /* ClockScheduledTimer.swift */,
+				CBD383D0239253E9004EEAB4 /* SpaceViewScheduledTimer.swift */,
+				CBD383B823924D74004EEAB4 /* Info.plist */,
 			);
-			path = Clock;
+			path = ClockTimer;
 			sourceTree = "<group>";
 		};
-		CBD379152388F40C006B0EBD /* Source */ = {
+		CBD383C723924DAE004EEAB4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CBD379222388F454006B0EBD /* ViewController.swift */,
-				CBD379242388F458006B0EBD /* ClockViewController.storyboard */,
-				CBD379262388F458006B0EBD /* ColorStorageService.swift */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
-		CBD3792A2388F4BC006B0EBD /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				CBD3792B2388F4BC006B0EBD /* Settings.framework */,
+				CBD383C823924DAF004EEAB4 /* Library.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CBD3838E23924CF5004EEAB4 /* Dependencies */ = {
-			isa = PBXGroup;
-			children = (
-				CBD383BF23924D74004EEAB4 /* ClockTimer.xcodeproj */,
-			);
-			path = Dependencies;
-			sourceTree = "<group>";
-		};
-		CBD383C023924D74004EEAB4 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CBD383C423924D75004EEAB4 /* ClockTimer.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		CBD378FF2388F3BD006B0EBD /* Headers */ = {
+		CBD383AF23924D74004EEAB4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBD379092388F3BD006B0EBD /* Clock.h in Headers */,
+				CBD383B923924D74004EEAB4 /* ClockTimer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		CBD379032388F3BD006B0EBD /* Clock */ = {
+		CBD383B323924D74004EEAB4 /* ClockTimer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CBD3790C2388F3BD006B0EBD /* Build configuration list for PBXNativeTarget "Clock" */;
+			buildConfigurationList = CBD383BC23924D74004EEAB4 /* Build configuration list for PBXNativeTarget "ClockTimer" */;
 			buildPhases = (
-				CBD378FF2388F3BD006B0EBD /* Headers */,
-				CBD379002388F3BD006B0EBD /* Sources */,
-				CBD379012388F3BD006B0EBD /* Frameworks */,
-				CBD379022388F3BD006B0EBD /* Resources */,
+				CBD383AF23924D74004EEAB4 /* Headers */,
+				CBD383B023924D74004EEAB4 /* Sources */,
+				CBD383B123924D74004EEAB4 /* Frameworks */,
+				CBD383B223924D74004EEAB4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CBD383C623924D99004EEAB4 /* PBXTargetDependency */,
 			);
-			name = Clock;
-			productName = Clock;
-			productReference = CBD379042388F3BD006B0EBD /* Clock.framework */;
+			name = ClockTimer;
+			productName = ClockTimer;
+			productReference = CBD383B423924D74004EEAB4 /* ClockTimer.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		CBD378FB2388F3BD006B0EBD /* Project object */ = {
+		CBD383AB23924D74004EEAB4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = minsone;
 				TargetAttributes = {
-					CBD379032388F3BD006B0EBD = {
+					CBD383B323924D74004EEAB4 = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
 					};
 				};
 			};
-			buildConfigurationList = CBD378FE2388F3BD006B0EBD /* Build configuration list for PBXProject "Clock" */;
+			buildConfigurationList = CBD383AE23924D74004EEAB4 /* Build configuration list for PBXProject "ClockTimer" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -170,34 +125,18 @@
 				en,
 				Base,
 			);
-			mainGroup = CBD378FA2388F3BD006B0EBD;
-			productRefGroup = CBD379052388F3BD006B0EBD /* Products */;
+			mainGroup = CBD383AA23924D74004EEAB4;
+			productRefGroup = CBD383B523924D74004EEAB4 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = CBD383C023924D74004EEAB4 /* Products */;
-					ProjectRef = CBD383BF23924D74004EEAB4 /* ClockTimer.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
-				CBD379032388F3BD006B0EBD /* Clock */,
+				CBD383B323924D74004EEAB4 /* ClockTimer */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		CBD383C423924D75004EEAB4 /* ClockTimer.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ClockTimer.framework;
-			remoteRef = CBD383C323924D75004EEAB4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
-		CBD379022388F3BD006B0EBD /* Resources */ = {
+		CBD383B223924D74004EEAB4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -207,38 +146,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CBD379002388F3BD006B0EBD /* Sources */ = {
+		CBD383B023924D74004EEAB4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBD379232388F454006B0EBD /* ViewController.swift in Sources */,
-				CBD379272388F458006B0EBD /* ColorStorageService.swift in Sources */,
+				CBD383CD23924DF5004EEAB4 /* ClockScheduledTimer.swift in Sources */,
+				CBD383D1239253E9004EEAB4 /* SpaceViewScheduledTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		CBD383C623924D99004EEAB4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ClockTimer;
-			targetProxy = CBD383C523924D99004EEAB4 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		CBD379242388F458006B0EBD /* ClockViewController.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CBD379252388F458006B0EBD /* Base */,
-			);
-			name = ClockViewController.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		CBD3790A2388F3BD006B0EBD /* Debug */ = {
+		CBD383BA23924D74004EEAB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -301,7 +221,7 @@
 			};
 			name = Debug;
 		};
-		CBD3790B2388F3BD006B0EBD /* Release */ = {
+		CBD383BB23924D74004EEAB4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -358,16 +278,18 @@
 			};
 			name = Release;
 		};
-		CBD3790D2388F3BD006B0EBD /* Debug */ = {
+		CBD383BD23924D74004EEAB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6794ZU679A;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Clock/Info.plist;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = ClockTimer/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -375,24 +297,27 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.minsOne.Labs.DigitClock.Clock;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.minsOne.Labs.ClockTimer;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		CBD3790E2388F3BD006B0EBD /* Release */ = {
+		CBD383BE23924D74004EEAB4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6794ZU679A;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Clock/Info.plist;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = ClockTimer/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -400,7 +325,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.minsOne.Labs.DigitClock.Clock;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.minsOne.Labs.ClockTimer;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -411,25 +336,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CBD378FE2388F3BD006B0EBD /* Build configuration list for PBXProject "Clock" */ = {
+		CBD383AE23924D74004EEAB4 /* Build configuration list for PBXProject "ClockTimer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CBD3790A2388F3BD006B0EBD /* Debug */,
-				CBD3790B2388F3BD006B0EBD /* Release */,
+				CBD383BA23924D74004EEAB4 /* Debug */,
+				CBD383BB23924D74004EEAB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CBD3790C2388F3BD006B0EBD /* Build configuration list for PBXNativeTarget "Clock" */ = {
+		CBD383BC23924D74004EEAB4 /* Build configuration list for PBXNativeTarget "ClockTimer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CBD3790D2388F3BD006B0EBD /* Debug */,
-				CBD3790E2388F3BD006B0EBD /* Release */,
+				CBD383BD23924D74004EEAB4 /* Debug */,
+				CBD383BE23924D74004EEAB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = CBD378FB2388F3BD006B0EBD /* Project object */;
+	rootObject = CBD383AB23924D74004EEAB4 /* Project object */;
 }

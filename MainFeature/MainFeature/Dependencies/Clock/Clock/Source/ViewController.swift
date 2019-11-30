@@ -10,6 +10,7 @@ import UIKit
 import Resources
 import Library
 import Settings
+import ClockTimer
 
 private let spaceViewAlpha: CGFloat = 0.5
 
@@ -28,8 +29,8 @@ final public class ViewController: UIViewController, Instantiable, Settings.List
     @IBOutlet private weak var rotationButton: UIButton!
     @IBOutlet private weak var settingButton: UIButton!
     
-    private weak var timeViewtimer: Timer?
-    private weak var spaceViewTimer: Timer?
+    private var clockTimer: ClockScheduledTimerable?
+    private var spaceViewTimer: SpaceViewScheduledTimerable?
     
     private var lastTranslation: CGPoint?
     
@@ -50,7 +51,7 @@ final public class ViewController: UIViewController, Instantiable, Settings.List
     public var colorStorageService: ColorStorageService?
     
     deinit {
-        offTickTimer()
+        clockTimer?.stop()
         offSpaceViewTimer()
     }
 }
@@ -72,6 +73,7 @@ extension ViewController {
         initColonView()
         initRotationBtn()
         initSettingBtn()
+        initSpaceView()
         onTickTimer()
         addTapGesture()
         addPanGesuture()
@@ -153,6 +155,10 @@ extension ViewController {
         
         present(nc, animated: true, completion: nil)
     }
+    
+    func initSpaceView() {
+        spaceView.layer.cornerRadius = 4
+    }
 }
 
 // MARK: View Handling
@@ -160,15 +166,9 @@ extension ViewController {
     override public var prefersStatusBarHidden: Bool { true }
     
     func updateSpaceView() {
-        let f: ((TimeInterval, @escaping () -> (Void)) -> Void) = { timeInterval, closure in
-            self.spaceView.layer.removeAllAnimations()
-            UIView.animate(withDuration: timeInterval, animations: closure)
-        }
-        
-        if isTouch {
-            f(0.7) { self.spaceView.alpha = spaceViewAlpha }
-        } else {
-            f(0.7) { self.spaceView.alpha = 0 }
+        spaceView.layer.removeAllAnimations()
+        UIView.animate(withDuration: 0.7) { [spaceView, isTouch] in
+            spaceView?.alpha = isTouch ? spaceViewAlpha : 0
         }
     }
     
@@ -219,7 +219,7 @@ extension ViewController {
     @objc func handleSingleTap(recognizer: UITapGestureRecognizer) {
         isTouch.toggle()
         
-        if !UIDevice.current.model.hasPrefix("iPad") {
+        if isIPad {
             isTouch ? onSpaceViewTimer() : offSpaceViewTimer()
         }
     }
@@ -252,10 +252,8 @@ extension ViewController {
         switch sender.state {
         case .began:
             lastTranslation = translation
-            break
         case .changed:
             changeViewAlpha(nowPoint: translation)
-            break
         case .cancelled, .ended, .failed, .possible:
             fallthrough
         default:
@@ -266,79 +264,69 @@ extension ViewController {
 
 
 // MARK: Time Handling
-extension ViewController {
+extension ViewController: ClockScheduledTimerReceivable, SpaceViewScheduledTimerReceivable {
     func onTickTimer() {
-        self.timeViewtimer = Timer.scheduledTimer(
-            timeInterval: 1.0,
-            target: self,
-            selector: #selector(tick),
-            userInfo: nil,
-            repeats: true)
+        clockTimer = ClockScheduledTimer()
+        clockTimer?.receiver = self
+        clockTimer?.start()
     }
     
-    func offTickTimer() {
-        self.timeViewtimer?.invalidate()
-        self.timeViewtimer = nil
-    }
-    
-    @objc func tick() {
-        let date = ClockDate.now
-        self.weekday = date.weekday
+    public func tick(clockDate date: ClockDate) {
+        weekday = date.weekday
         
-        UIView.animate(withDuration: 1.0) {
+        let timeList = getTimeList(hour: date.hour,
+                                   minute: date.minute,
+                                   second: date.second)
+        let fn = setDigitContentRect
+        UIView.animate(withDuration: 1.0) { [weak self] in
+            guard let self = self else { return }
             var count = 0
-            let f = self.setDigitContentRect
-            let timeList = self.getTimeList(hour: date.hour, minute: date.minute, second: date.second)
-            
             timeList.forEach {
-                f($0, self.timeImageViews[count])
+                fn($0, self.timeImageViews[count])
                 count += 1
             }
-            self.colonImageViews.forEach { $0.alpha = ($0.alpha == 1.0 ? 0.2 : 1.0) }
+            self.colonImageViews
+                .forEach {
+                    $0.alpha = (Int($0.alpha) == 1 ? 0.2 : 1.0)
+            }
         }
     }
     
     func onSpaceViewTimer() {
-        guard responds(to: #selector(fadeSpaceView))
-            else { return }
-        
-        spaceViewTimer = Timer.scheduledTimer(
-            timeInterval: 4.0,
-            target: self,
-            selector: #selector(fadeSpaceView),
-            userInfo: nil,
-            repeats: false)
+        spaceViewTimer = SpaceViewScheduledTimer()
+        spaceViewTimer?.receiver = self
+        spaceViewTimer?.start()
     }
     
     func offSpaceViewTimer() {
-        spaceViewTimer?.invalidate()
-        spaceViewTimer = nil
+        spaceViewTimer?.stop()
     }
     
-    @objc func fadeSpaceView() {
+    public func tickSpaceView() {
         offSpaceViewTimer()
         isTouch = false
     }
 }
 
-// MARK: Util Methods
-extension ViewController {
-    func getTimeList(hour h: Int, minute m: Int, second s: Int) -> [Int] {
-        var timeLists: [Int] = []
-        timeLists += [h / 10]
-        timeLists += [h % 10]
-        timeLists += [m / 10]
-        timeLists += [m % 10]
-        timeLists += [s / 10]
-        timeLists += [s % 10]
-        return timeLists
-    }
-    
-    func asyncUI(f: @escaping () -> Void) {
-        DispatchQueue.main.async(execute: f)
-    }
-    
-    func asyncLogic(f: @escaping () -> Void) {
-        DispatchQueue.global().async(execute: f)
-    }
+private func getTimeList(hour h: Int, minute m: Int, second s: Int) -> [Int] {
+    var timeLists: [Int] = []
+    timeLists += [h / 10]
+    timeLists += [h % 10]
+    timeLists += [m / 10]
+    timeLists += [m % 10]
+    timeLists += [s / 10]
+    timeLists += [s % 10]
+    return timeLists
+}
+
+private func asyncUI(f: @escaping () -> Void) {
+    DispatchQueue.main.async(execute: f)
+}
+
+private func asyncLogic(f: @escaping () -> Void) {
+    DispatchQueue.global().async(execute: f)
+}
+
+private var isIPad: Bool {
+    return UIDevice.current.model.hasPrefix("iPad")
 }

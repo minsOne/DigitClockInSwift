@@ -181,10 +181,10 @@
                                 </constraints>
                             </view>
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gZR-W4-83p" userLabel="SpaceView">
-                                <rect key="frame" x="0.0" y="802" width="414" height="60"/>
+                                <rect key="frame" x="20" y="802" width="374" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k90-Bf-E5B" userLabel="SettingVCButton">
-                                        <rect key="frame" x="340" y="8" width="44" height="44"/>
+                                        <rect key="frame" x="300" y="8" width="44" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="4Tg-He-Sg8"/>
                                             <constraint firstAttribute="width" constant="44" id="RwP-zC-AKz"/>
@@ -194,7 +194,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tx-bA-b71" userLabel="RotationButton">
-                                        <rect key="frame" x="288" y="8" width="44" height="44"/>
+                                        <rect key="frame" x="248" y="8" width="44" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="24" id="Mi3-ZL-YOk"/>
                                             <constraint firstAttribute="height" constant="24" id="kkA-8X-KIt"/>
@@ -464,7 +464,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="0jN-bm-IfM" secondAttribute="trailing" constant="20" id="Aoc-Bw-6e7">
                                 <variation key="heightClass=regular-widthClass=compact" constant="60"/>
                             </constraint>
-                            <constraint firstItem="gZR-W4-83p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DT5-w2-f3K"/>
+                            <constraint firstItem="gZR-W4-83p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="DT5-w2-f3K"/>
                             <constraint firstItem="Ilc-ew-xTq" firstAttribute="width" secondItem="0jN-bm-IfM" secondAttribute="width" id="EH7-8h-y3k"/>
                             <constraint firstItem="Ilc-ew-xTq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Log-Jk-N6U">
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
@@ -478,7 +478,7 @@
                             <constraint firstAttribute="centerY" secondItem="0jN-bm-IfM" secondAttribute="centerY" id="QPW-nL-8ku"/>
                             <constraint firstAttribute="centerX" secondItem="Ilc-ew-xTq" secondAttribute="centerX" id="Z25-Qy-vTg"/>
                             <constraint firstAttribute="bottom" secondItem="gZR-W4-83p" secondAttribute="bottom" id="fKQ-Ee-6xc"/>
-                            <constraint firstAttribute="trailing" secondItem="gZR-W4-83p" secondAttribute="trailing" id="gF2-uC-ple"/>
+                            <constraint firstAttribute="trailing" secondItem="gZR-W4-83p" secondAttribute="trailing" constant="20" id="gF2-uC-ple"/>
                             <constraint firstItem="Ilc-ew-xTq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="hTM-N7-EZb"/>
                             <constraint firstItem="0jN-bm-IfM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="ivd-oa-Y6o">
                                 <variation key="heightClass=regular-widthClass=compact" constant="60"/>

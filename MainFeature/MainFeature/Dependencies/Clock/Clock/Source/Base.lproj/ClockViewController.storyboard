@@ -179,55 +179,6 @@
                                     </constraint>
                                 </constraints>
                             </view>
-                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gZR-W4-83p" userLabel="SpaceView">
-                                <rect key="frame" x="0.0" y="802" width="414" height="60"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k90-Bf-E5B" userLabel="SettingVCButton">
-                                        <rect key="frame" x="340" y="8" width="44" height="44"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="4Tg-He-Sg8"/>
-                                            <constraint firstAttribute="width" constant="44" id="RwP-zC-AKz"/>
-                                        </constraints>
-                                        <state key="normal">
-                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tx-bA-b71" userLabel="RotationButton">
-                                        <rect key="frame" x="288" y="8" width="44" height="44"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="24" id="Mi3-ZL-YOk"/>
-                                            <constraint firstAttribute="height" constant="24" id="kkA-8X-KIt"/>
-                                        </constraints>
-                                        <state key="normal">
-                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="Mi3-ZL-YOk"/>
-                                                <exclude reference="kkA-8X-KIt"/>
-                                            </mask>
-                                        </variation>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="k90-Bf-E5B" secondAttribute="trailing" constant="30" id="2S8-vD-p2Y"/>
-                                    <constraint firstAttribute="bottom" secondItem="k90-Bf-E5B" secondAttribute="bottom" id="Box-FB-RHg"/>
-                                    <constraint firstItem="4tx-bA-b71" firstAttribute="height" secondItem="k90-Bf-E5B" secondAttribute="height" id="RHb-Ra-ta9"/>
-                                    <constraint firstAttribute="centerY" secondItem="4tx-bA-b71" secondAttribute="centerY" id="XMj-Yn-jfM"/>
-                                    <constraint firstAttribute="centerY" secondItem="k90-Bf-E5B" secondAttribute="centerY" id="b7R-ac-VbQ"/>
-                                    <constraint firstAttribute="bottom" secondItem="4tx-bA-b71" secondAttribute="bottom" id="cmo-eV-tb1"/>
-                                    <constraint firstAttribute="height" constant="60" id="jTv-8w-44B"/>
-                                    <constraint firstItem="4tx-bA-b71" firstAttribute="width" secondItem="k90-Bf-E5B" secondAttribute="width" id="pqI-rS-NcP"/>
-                                    <constraint firstItem="k90-Bf-E5B" firstAttribute="leading" secondItem="4tx-bA-b71" secondAttribute="trailing" constant="8" id="xnl-Jh-YI6"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="cmo-eV-tb1"/>
-                                        <exclude reference="Box-FB-RHg"/>
-                                    </mask>
-                                </variation>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0jN-bm-IfM" userLabel="TimeView">
                                 <rect key="frame" x="80" y="154" width="254" height="628"/>
                                 <subviews>
@@ -453,6 +404,55 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <view clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gZR-W4-83p" userLabel="SpaceView">
+                                <rect key="frame" x="20" y="802" width="374" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k90-Bf-E5B" userLabel="SettingVCButton">
+                                        <rect key="frame" x="300" y="8" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="4Tg-He-Sg8"/>
+                                            <constraint firstAttribute="width" constant="44" id="RwP-zC-AKz"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tx-bA-b71" userLabel="RotationButton">
+                                        <rect key="frame" x="248" y="8" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="Mi3-ZL-YOk"/>
+                                            <constraint firstAttribute="height" constant="24" id="kkA-8X-KIt"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Mi3-ZL-YOk"/>
+                                                <exclude reference="kkA-8X-KIt"/>
+                                            </mask>
+                                        </variation>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="k90-Bf-E5B" secondAttribute="trailing" constant="30" id="2S8-vD-p2Y"/>
+                                    <constraint firstAttribute="bottom" secondItem="k90-Bf-E5B" secondAttribute="bottom" id="Box-FB-RHg"/>
+                                    <constraint firstItem="4tx-bA-b71" firstAttribute="height" secondItem="k90-Bf-E5B" secondAttribute="height" id="RHb-Ra-ta9"/>
+                                    <constraint firstAttribute="centerY" secondItem="4tx-bA-b71" secondAttribute="centerY" id="XMj-Yn-jfM"/>
+                                    <constraint firstAttribute="centerY" secondItem="k90-Bf-E5B" secondAttribute="centerY" id="b7R-ac-VbQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="4tx-bA-b71" secondAttribute="bottom" id="cmo-eV-tb1"/>
+                                    <constraint firstAttribute="height" constant="60" id="jTv-8w-44B"/>
+                                    <constraint firstItem="4tx-bA-b71" firstAttribute="width" secondItem="k90-Bf-E5B" secondAttribute="width" id="pqI-rS-NcP"/>
+                                    <constraint firstItem="k90-Bf-E5B" firstAttribute="leading" secondItem="4tx-bA-b71" secondAttribute="trailing" constant="8" id="xnl-Jh-YI6"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="cmo-eV-tb1"/>
+                                        <exclude reference="Box-FB-RHg"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -463,7 +463,6 @@
                             <constraint firstAttribute="trailingMargin" secondItem="0jN-bm-IfM" secondAttribute="trailing" constant="20" id="Aoc-Bw-6e7">
                                 <variation key="heightClass=regular-widthClass=compact" constant="60"/>
                             </constraint>
-                            <constraint firstItem="gZR-W4-83p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DT5-w2-f3K"/>
                             <constraint firstItem="Ilc-ew-xTq" firstAttribute="width" secondItem="0jN-bm-IfM" secondAttribute="width" id="EH7-8h-y3k"/>
                             <constraint firstItem="Ilc-ew-xTq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Log-Jk-N6U">
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
@@ -477,7 +476,7 @@
                             <constraint firstAttribute="centerY" secondItem="0jN-bm-IfM" secondAttribute="centerY" id="QPW-nL-8ku"/>
                             <constraint firstAttribute="centerX" secondItem="Ilc-ew-xTq" secondAttribute="centerX" id="Z25-Qy-vTg"/>
                             <constraint firstAttribute="bottom" secondItem="gZR-W4-83p" secondAttribute="bottom" id="fKQ-Ee-6xc"/>
-                            <constraint firstAttribute="trailing" secondItem="gZR-W4-83p" secondAttribute="trailing" id="gF2-uC-ple"/>
+                            <constraint firstItem="gZR-W4-83p" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h05-Sj-c2A"/>
                             <constraint firstItem="Ilc-ew-xTq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="hTM-N7-EZb"/>
                             <constraint firstItem="0jN-bm-IfM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="ivd-oa-Y6o">
                                 <variation key="heightClass=regular-widthClass=compact" constant="60"/>
@@ -485,6 +484,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Ilc-ew-xTq" secondAttribute="trailing" constant="20" id="lzp-tr-Fc3">
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
+                            <constraint firstItem="gZR-W4-83p" firstAttribute="width" secondItem="Ilc-ew-xTq" secondAttribute="width" id="mdc-U7-APN"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gZR-W4-83p" secondAttribute="bottom" id="nzk-Lf-XP6"/>
                         </constraints>
                         <variation key="default">
