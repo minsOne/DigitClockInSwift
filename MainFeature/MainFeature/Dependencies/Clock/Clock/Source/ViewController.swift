@@ -14,7 +14,11 @@ import ClockTimer
 
 private let spaceViewAlpha: CGFloat = 0.5
 
-final public class ViewController: UIViewController, Instantiable { //}, Settings.Listener {
+public protocol PresentableListener: class {
+    
+}
+
+final public class ViewController: UIViewController, Instantiable, Presentable, ViewControllable {
     public static var storyboardName: String { "ClockViewController" }
     
     // MARK: Properties
@@ -28,6 +32,8 @@ final public class ViewController: UIViewController, Instantiable { //}, Setting
     
     @IBOutlet private weak var rotationButton: UIButton!
     @IBOutlet private weak var settingButton: UIButton!
+    
+    public weak var listener: PresentableListener?
     
     private var clockTimer: ClockScheduledTimerable?
     private var spaceViewTimer: SpaceViewScheduledTimerable?

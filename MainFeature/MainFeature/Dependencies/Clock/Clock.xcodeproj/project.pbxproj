@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CBAE5804239289EE004DE131 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAE5803239289EE004DE131 /* Router.swift */; };
+		CBAE5805239289EE004DE131 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAE5802239289ED004DE131 /* Interactor.swift */; };
+		CBAE5806239289EE004DE131 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAE5801239289ED004DE131 /* Builder.swift */; };
+		CBAE580923928A0F004DE131 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAE580723928A0F004DE131 /* RxSwift.framework */; };
+		CBAE580B23928A0F004DE131 /* RIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAE580823928A0F004DE131 /* RIBs.framework */; };
 		CBD379092388F3BD006B0EBD /* Clock.h in Headers */ = {isa = PBXBuildFile; fileRef = CBD379072388F3BD006B0EBD /* Clock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBD379232388F454006B0EBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD379222388F454006B0EBD /* ViewController.swift */; };
 		CBD379272388F458006B0EBD /* ColorStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD379262388F458006B0EBD /* ColorStorageService.swift */; };
@@ -31,6 +36,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CBAE5801239289ED004DE131 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		CBAE5802239289ED004DE131 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		CBAE5803239289EE004DE131 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		CBAE580723928A0F004DE131 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../../../../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		CBAE580823928A0F004DE131 /* RIBs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RIBs.framework; path = ../../../../Carthage/Build/iOS/RIBs.framework; sourceTree = "<group>"; };
 		CBD379042388F3BD006B0EBD /* Clock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Clock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD379072388F3BD006B0EBD /* Clock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Clock.h; sourceTree = "<group>"; };
 		CBD379082388F3BD006B0EBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,7 +56,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBAE580923928A0F004DE131 /* RxSwift.framework in Frameworks */,
 				CBD3792C2388F4BC006B0EBD /* Settings.framework in Frameworks */,
+				CBAE580B23928A0F004DE131 /* RIBs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +96,9 @@
 		CBD379152388F40C006B0EBD /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				CBAE5803239289EE004DE131 /* Router.swift */,
+				CBAE5801239289ED004DE131 /* Builder.swift */,
+				CBAE5802239289ED004DE131 /* Interactor.swift */,
 				CBD379222388F454006B0EBD /* ViewController.swift */,
 				CBD379242388F458006B0EBD /* ClockViewController.storyboard */,
 				CBD379262388F458006B0EBD /* ColorStorageService.swift */,
@@ -94,6 +109,8 @@
 		CBD3792A2388F4BC006B0EBD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CBAE580823928A0F004DE131 /* RIBs.framework */,
+				CBAE580723928A0F004DE131 /* RxSwift.framework */,
 				CBD3792B2388F4BC006B0EBD /* Settings.framework */,
 			);
 			name = Frameworks;
@@ -212,7 +229,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBD379232388F454006B0EBD /* ViewController.swift in Sources */,
+				CBAE5804239289EE004DE131 /* Router.swift in Sources */,
+				CBAE5805239289EE004DE131 /* Interactor.swift in Sources */,
 				CBD379272388F458006B0EBD /* ColorStorageService.swift in Sources */,
+				CBAE5806239289EE004DE131 /* Builder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
