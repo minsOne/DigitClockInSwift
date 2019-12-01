@@ -26,6 +26,7 @@
 		CBE1AA11235AADF100AEA9F9 /* Resources.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CBE1AA0F235AADF100AEA9F9 /* Resources.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CBE1AA3E235AB34500AEA9F9 /* Library.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE1AA3D235AB34500AEA9F9 /* Library.framework */; };
 		CBE1AA3F235AB34500AEA9F9 /* Library.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CBE1AA3D235AB34500AEA9F9 /* Library.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CBF894452393AAC400FEC547 /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF894442393AAC400FEC547 /* AppComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		CBE1AA0F235AADF100AEA9F9 /* Resources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Resources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBE1AA3D235AB34500AEA9F9 /* Library.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Library.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBF75BD8235B2E98006DE7A1 /* Clock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Clock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBF894442393AAC400FEC547 /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				CB999B041AE78E6300CDB674 /* AppDelegate.swift */,
+				CBF894442393AAC400FEC547 /* AppComponent.swift */,
 				CB79CF3C1AF346EE0019B9F5 /* Model */,
 				CB999B021AE78E6300CDB674 /* Supporting Files */,
 			);
@@ -326,6 +329,7 @@
 			files = (
 				CB999B051AE78E6300CDB674 /* AppDelegate.swift in Sources */,
 				CB79CF3B1AF346E90019B9F5 /* ThemeColor.swift in Sources */,
+				CBF894452393AAC400FEC547 /* AppComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

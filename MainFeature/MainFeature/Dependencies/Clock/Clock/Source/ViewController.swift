@@ -11,6 +11,7 @@ import Resources
 import Library
 import Settings
 import ClockTimer
+import RIBs
 
 private let spaceViewAlpha: CGFloat = 0.5
 
@@ -169,6 +170,20 @@ extension ViewController {
         nc.popoverPresentationController?.permittedArrowDirections = .any
         nc.popoverPresentationController?.sourceView = self.view
         nc.popoverPresentationController?.sourceRect = view.convert(sender.frame, from: sender.superview)
+        
+        present(nc, animated: true, completion: nil)
+    }
+    
+    public func present(viewController: RIBs.ViewControllable) {
+        let nc = UINavigationController(rootViewController: viewController.uiviewController)
+        if #available(iOS 13.0, *) {
+            nc.isModalInPresentation = true
+        }
+        nc.modalPresentationStyle = .popover
+        nc.popoverPresentationController?.permittedArrowDirections = .any
+        nc.popoverPresentationController?.sourceView = self.view
+        let sourceRect = view.convert(settingButton.frame, from: settingButton.superview)
+        nc.popoverPresentationController?.sourceRect = sourceRect
         
         present(nc, animated: true, completion: nil)
     }

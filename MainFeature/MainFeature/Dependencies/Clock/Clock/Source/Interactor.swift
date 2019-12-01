@@ -10,7 +10,8 @@ import RIBs
 import RxSwift
 
 public protocol Routing: ViewableRouting {
-    // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
+    func routeToSettings()
+    func detachSettings()
 }
 
 public protocol Presentable: RIBs.Presentable {

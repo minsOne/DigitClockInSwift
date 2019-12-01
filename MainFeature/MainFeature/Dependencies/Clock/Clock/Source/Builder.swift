@@ -7,34 +7,42 @@
 //
 
 import RIBs
+import Settings
 
-public protocol Dependency: RIBs.Dependency {
-    // TODO: Declare the set of dependencies required by this RIB, but cannot be
-    // created by this RIB.
-}
+public protocol Dependency: RIBs.Dependency {}
 
-public final class Component: RIBs.Component<Dependency> {
+public final class Component: RIBs.Component<Dependency>, Settings.Dependency {
+    fileprivate let colorStorageSerive: ColorStorageService
 
-    // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
+    init(colorStorageSerive service: ColorStorageService,
+         dependency: Dependency) {
+        self.colorStorageSerive = service
+        super.init(dependency: dependency)
+    }
 }
 
 // MARK: - Builder
 
 public protocol Buildable: RIBs.Buildable {
-    func build(withListener listener: Listener) -> Routing
+    func build(colorStorageSerive: ColorStorageService) -> LaunchRouting
 }
 
 public final class Builder: RIBs.Builder<Dependency>, Buildable {
-
+    
     override public init(dependency: Dependency) {
         super.init(dependency: dependency)
     }
-
-    public func build(withListener listener: Listener) -> Routing {
-        let component = Component(dependency: dependency)
+    
+    public func build(colorStorageSerive service: ColorStorageService) -> LaunchRouting {
+        let component = Component(colorStorageSerive: service,
+                                  dependency: dependency)
         let viewController = ViewController.instance
+        viewController.colorStorageService = service
         let interactor = Interactor(presenter: viewController)
-        interactor.listener = listener
-        return Router(interactor: interactor, viewController: viewController)
+        
+        let settingsBuilder = Settings.Builder(dependency: component)
+        return Router(interactor: interactor,
+                      viewController: viewController,
+                      settingsBuilder: settingsBuilder)
     }
 }

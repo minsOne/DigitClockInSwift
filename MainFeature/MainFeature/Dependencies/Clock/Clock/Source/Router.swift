@@ -7,21 +7,42 @@
 //
 
 import RIBs
+import Settings
 
-public protocol Interactable: RIBs.Interactable {
+public protocol Interactable: RIBs.Interactable, Settings.Listener {
     var router: Routing? { get set }
     var listener: Listener? { get set }
 }
 
 public protocol ViewControllable: RIBs.ViewControllable {
-    // TODO: Declare methods the router invokes to manipulate the view hierarchy.
+    func present(viewController: RIBs.ViewControllable)
 }
 
-public final class Router: ViewableRouter<Interactable, ViewControllable>, Routing {
-
-    // TODO: Constructor inject child builder protocols to allow building children.
-    public override init(interactor: Interactable, viewController: ViewControllable) {
+public final class Router: RIBs.LaunchRouter<Interactable, ViewControllable>, Routing {
+    public init(interactor: Interactable,
+                viewController: ViewControllable,
+                settingsBuilder: Settings.Buildable) {
+        self._viewController = viewController
+        self.settingsBuilder = settingsBuilder
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
+    }
+    
+    private let _viewController: ViewControllable
+    private let settingsBuilder: Settings.Buildable
+    private var settingsRouter: Settings.Routing?
+    
+    public func routeToSettings() {
+        guard settingsRouter == nil else { return }
+        let router: Settings.Routing = settingsBuilder.build(withListener: interactor)
+        viewController.present(viewController: router.viewControllable)
+        attachChild(router)
+        settingsRouter = router
+    }
+    
+    public func detachSettings() {
+        guard let router = settingsRouter else { return }
+        detachChild(router)
+        settingsRouter = nil
     }
 }

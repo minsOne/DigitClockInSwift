@@ -6,6 +6,7 @@
 //  Copyright (c) 2015년 minsOne. All rights reserved.
 //
 
+import RIBs
 import UIKit
 import Analytics
 import MainFeature.Clock
@@ -18,15 +19,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.isIdleTimerDisabled = true
         _ = DCAnalytics()
         
-        window = UIWindow(frame: UIScreen.main.bounds)
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        self.window = window
         
-        let vc = Clock.ViewController.instance
-        vc.colorStorageService = ColorStorageServiceImpl()
-        window?.rootViewController = vc
-        window?.makeKeyAndVisible()
+        let launchRouter = Clock.Builder(dependency: AppComponent()).build(colorStorageSerive: ColorStorageServiceImpl())
+        self.launchRouter = launchRouter
+        launchRouter.launch(from: window)
         
         return true
     }
+    
+    // MARK: - Private
+
+    private var launchRouter: LaunchRouting?
 }
 
 private struct ColorStorageServiceImpl: Clock.ColorStorageService {
