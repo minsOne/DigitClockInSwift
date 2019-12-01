@@ -15,11 +15,15 @@ import RIBs
 
 private let spaceViewAlpha: CGFloat = 0.5
 
-public protocol PresentableListener: class {
-    
+public enum PresentableListenerAction {
+    case tappedSettingButton
 }
 
-final public class ViewController: UIViewController, Instantiable, Presentable, ViewControllable, Settings.Dependency, Settings.Listener {
+public protocol PresentableListener: class {
+    func action(action: PresentableListenerAction)
+}
+
+final public class ViewController: UIViewController, Instantiable, Presentable, ViewControllable {
     public static var storyboardName: String { "ClockViewController" }
     
     // MARK: Properties
@@ -35,9 +39,6 @@ final public class ViewController: UIViewController, Instantiable, Presentable, 
     @IBOutlet private weak var settingButton: UIButton!
     
     public weak var listener: PresentableListener?
-    
-    private var settingsBuilder: Settings.Buildable?
-    private var settingsRouter: Settings.Routing?
     
     private var clockTimer: ClockScheduledTimerable?
     private var spaceViewTimer: SpaceViewScheduledTimerable?
@@ -84,7 +85,6 @@ extension ViewController {
         initRotationBtn()
         initSettingBtn()
         initSpaceView()
-        initSettingsBuilder()
         onTickTimer()
         addTapGesture()
         addPanGesuture()
@@ -131,8 +131,6 @@ extension ViewController {
     }
     
     func addTapGesture() {
-        guard responds(to: #selector(handleSingleTap)) else { return }
-        
         let singleTap = UITapGestureRecognizer(
             target: self,
             action: #selector(handleSingleTap))
@@ -140,38 +138,18 @@ extension ViewController {
     }
     
     func addPanGesuture() {
-        guard responds(to: #selector(displayGestureForPanGestureRecognizer))
-            else { return }
-        let pan = UIPanGestureRecognizer(
-            target: self,
-            action: #selector(displayGestureForPanGestureRecognizer))
+        let selector = #selector(displayGestureForPanGestureRecognizer)
+        let pan = UIPanGestureRecognizer( target: self, action: selector)
         view.addGestureRecognizer(pan)
     }
     
     func addSettingButtonTapAction() {
-        guard responds(to: #selector(presentSettingViewController(sender:))) else { return }
-        settingButton.addTarget(self,
-                                action: #selector(presentSettingViewController(sender:)),
-                                for: .touchUpInside)
+        let selector = #selector(presentSettingViewController(sender:))
+        settingButton.addTarget(self, action: selector, for: .touchUpInside)
     }
     
     @objc func presentSettingViewController(sender: UIButton) {
-        guard
-            let builder = settingsBuilder
-            else { return }
-        
-        let router = builder.build(withListener: self)
-        self.settingsRouter = router
-        let nc = UINavigationController(rootViewController: router.viewControllable.uiviewController)
-        if #available(iOS 13.0, *) {
-            nc.isModalInPresentation = true
-        }
-        nc.modalPresentationStyle = .popover
-        nc.popoverPresentationController?.permittedArrowDirections = .any
-        nc.popoverPresentationController?.sourceView = self.view
-        nc.popoverPresentationController?.sourceRect = view.convert(sender.frame, from: sender.superview)
-        
-        present(nc, animated: true, completion: nil)
+        listener?.action(action: .tappedSettingButton)
     }
     
     public func present(viewController: RIBs.ViewControllable) {
@@ -188,12 +166,12 @@ extension ViewController {
         present(nc, animated: true, completion: nil)
     }
     
-    func initSpaceView() {
-        spaceView.layer.cornerRadius = 4
+    public func dismiss(viewController: RIBs.ViewControllable) {
+        viewController.uiviewController.dismiss(animated: true, completion: nil)
     }
     
-    private func initSettingsBuilder() {
-        settingsBuilder = Settings.Builder(dependency: self)
+    func initSpaceView() {
+        spaceView.layer.cornerRadius = 4
     }
 }
 

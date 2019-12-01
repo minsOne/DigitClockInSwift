@@ -20,6 +20,7 @@ public protocol Presentable: RIBs.Presentable {
 
 public protocol Listener: class {
     func update(color: UIColor)
+    func finishSelectColor()
 }
 
 public final class Interactor: RIBs.PresentableInteractor<Presentable>, Interactable, PresentableListener {
@@ -45,5 +46,9 @@ public final class Interactor: RIBs.PresentableInteractor<Presentable>, Interact
     
     public func update(color: UIColor) {
         listener?.update(color: color)
+    }
+
+    public func done() {
+        listener?.finishSelectColor()
     }
 }

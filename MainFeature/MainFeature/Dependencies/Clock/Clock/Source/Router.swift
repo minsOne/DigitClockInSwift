@@ -16,19 +16,18 @@ public protocol Interactable: RIBs.Interactable, Settings.Listener {
 
 public protocol ViewControllable: RIBs.ViewControllable {
     func present(viewController: RIBs.ViewControllable)
+    func dismiss(viewController: RIBs.ViewControllable)
 }
 
 public final class Router: RIBs.LaunchRouter<Interactable, ViewControllable>, Routing {
     public init(interactor: Interactable,
                 viewController: ViewControllable,
                 settingsBuilder: Settings.Buildable) {
-        self._viewController = viewController
         self.settingsBuilder = settingsBuilder
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
     }
     
-    private let _viewController: ViewControllable
     private let settingsBuilder: Settings.Buildable
     private var settingsRouter: Settings.Routing?
     
@@ -44,5 +43,6 @@ public final class Router: RIBs.LaunchRouter<Interactable, ViewControllable>, Ro
         guard let router = settingsRouter else { return }
         detachChild(router)
         settingsRouter = nil
+        viewController.dismiss(viewController: router.viewControllable)
     }
 }

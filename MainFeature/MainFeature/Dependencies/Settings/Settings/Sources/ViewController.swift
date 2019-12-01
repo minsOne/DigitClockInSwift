@@ -14,6 +14,7 @@ import Library
 
 public protocol PresentableListener: class {
     func update(color: UIColor)
+    func done()
 }
 
 final public class ViewController: UITableViewController, SettingTableViewCellPresenterListener, Instantiable, Presentable, ViewControllable {
@@ -102,14 +103,14 @@ final public class ViewController: UITableViewController, SettingTableViewCellPr
     }
     
     @objc func pressedDoneBtn(sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+        listener?.done()
     }
     
     func selectedBackground(theme: UIColor) {
         listener?.update(color: theme)
 
         if !UIDevice.current.model.hasPrefix("iPad") {
-            dismiss(animated: true, completion: nil)
+            listener?.done()
         }
     }
 }
