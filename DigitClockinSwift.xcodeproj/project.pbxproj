@@ -27,6 +27,7 @@
 		CBE1AA3E235AB34500AEA9F9 /* Library.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE1AA3D235AB34500AEA9F9 /* Library.framework */; };
 		CBE1AA3F235AB34500AEA9F9 /* Library.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CBE1AA3D235AB34500AEA9F9 /* Library.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CBF894452393AAC400FEC547 /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF894442393AAC400FEC547 /* AppComponent.swift */; };
+		CBF8944E2393CCBD00FEC547 /* ColorStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF8944D2393CCBD00FEC547 /* ColorStorageService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		CBE1AA3D235AB34500AEA9F9 /* Library.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Library.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBF75BD8235B2E98006DE7A1 /* Clock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Clock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBF894442393AAC400FEC547 /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
+		CBF8944D2393CCBD00FEC547 /* ColorStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorStorageService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				CB79CF3A1AF346E90019B9F5 /* ThemeColor.swift */,
+				CBF8944D2393CCBD00FEC547 /* ColorStorageService.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB999B051AE78E6300CDB674 /* AppDelegate.swift in Sources */,
+				CBF8944E2393CCBD00FEC547 /* ColorStorageService.swift in Sources */,
 				CB79CF3B1AF346E90019B9F5 /* ThemeColor.swift in Sources */,
 				CBF894452393AAC400FEC547 /* AppComponent.swift in Sources */,
 			);

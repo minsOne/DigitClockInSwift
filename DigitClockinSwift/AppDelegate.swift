@@ -34,16 +34,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private var launchRouter: LaunchRouting?
 }
 
-private struct ColorStorageServiceImpl: Clock.ColorStorageService {
-    let initBackgroundColor: UIColor?
-    
-    init() {
-        initBackgroundColor = ThemeColor.initialThemeColor().nowTheme
-            ?? ThemeColor.colorList.first
-    }
-    
-    func store(color: UIColor) {
-        ThemeColor.sharedInstance.nowTheme = color
-        ThemeColor.storeThemeColor(theme: ThemeColor.sharedInstance)
-    }
-}
