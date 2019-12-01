@@ -18,7 +18,7 @@ public protocol PresentableListener: class {
     
 }
 
-final public class ViewController: UIViewController, Instantiable, Presentable, ViewControllable {
+final public class ViewController: UIViewController, Instantiable, Presentable, ViewControllable, Settings.Dependency, Settings.Listener {
     public static var storyboardName: String { "ClockViewController" }
     
     // MARK: Properties
@@ -34,6 +34,9 @@ final public class ViewController: UIViewController, Instantiable, Presentable, 
     @IBOutlet private weak var settingButton: UIButton!
     
     public weak var listener: PresentableListener?
+    
+    private var settingsBuilder: Settings.Buildable?
+    private var settingsRouter: Settings.Routing?
     
     private var clockTimer: ClockScheduledTimerable?
     private var spaceViewTimer: SpaceViewScheduledTimerable?
@@ -80,6 +83,7 @@ extension ViewController {
         initRotationBtn()
         initSettingBtn()
         initSpaceView()
+        initSettingsBuilder()
         onTickTimer()
         addTapGesture()
         addPanGesuture()
@@ -151,9 +155,16 @@ extension ViewController {
     }
     
     @objc func presentSettingViewController(sender: UIButton) {
-        let vc = Settings.ViewController.instance
-//        vc.listener = self
-        let nc = UINavigationController(rootViewController: vc)
+        guard
+            let builder = settingsBuilder
+            else { return }
+        
+        let router = builder.build(withListener: self)
+        self.settingsRouter = router
+        let nc = UINavigationController(rootViewController: router.viewControllable.uiviewController)
+        if #available(iOS 13.0, *) {
+            nc.isModalInPresentation = true
+        }
         nc.modalPresentationStyle = .popover
         nc.popoverPresentationController?.permittedArrowDirections = .any
         nc.popoverPresentationController?.sourceView = self.view
@@ -164,6 +175,10 @@ extension ViewController {
     
     func initSpaceView() {
         spaceView.layer.cornerRadius = 4
+    }
+    
+    private func initSettingsBuilder() {
+        settingsBuilder = Settings.Builder(dependency: self)
     }
 }
 
