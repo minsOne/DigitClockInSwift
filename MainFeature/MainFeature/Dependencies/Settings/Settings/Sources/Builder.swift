@@ -7,6 +7,7 @@
 //
 
 import RIBs
+import Resources
 
 public protocol Dependency: RIBs.Dependency {
     // TODO: Declare the set of dependencies required by this RIB, but cannot be
@@ -32,7 +33,7 @@ public final class Builder: RIBs.Builder<Dependency>, Buildable {
 
     public func build(withListener listener: Listener) -> Routing {
         let component = Component(dependency: dependency)
-        let viewController = ViewController.instance
+        let viewController: ViewController = R.Storyboard.settings.viewController()
         let interactor = Interactor(presenter: viewController)
         interactor.listener = listener
         return Router(interactor: interactor, viewController: viewController)

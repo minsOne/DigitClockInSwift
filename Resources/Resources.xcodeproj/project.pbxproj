@@ -15,6 +15,10 @@
 		CBE1AA09235AA73000AEA9F9 /* Resources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE1A9C2235AA5AE00AEA9F9 /* Resources.framework */; };
 		CBE1AABC235AD9AF00AEA9F9 /* ThemeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1AABB235AD9AF00AEA9F9 /* ThemeColors.swift */; };
 		CBE1AAC0235ADA9D00AEA9F9 /* Library.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE1AABF235ADA9D00AEA9F9 /* Library.framework */; };
+		CBF894732396A52200FEC547 /* R+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF894722396A52200FEC547 /* R+Image.swift */; };
+		CBF894752396A58000FEC547 /* R+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF894742396A58000FEC547 /* R+Storyboard.swift */; };
+		CBF894792396A76800FEC547 /* ClockViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBF894782396A75F00FEC547 /* ClockViewController.storyboard */; };
+		CBF8947A2396A77000FEC547 /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBF894762396A74900FEC547 /* SettingsViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +43,10 @@
 		CBE1AA08235AA73000AEA9F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBE1AABB235AD9AF00AEA9F9 /* ThemeColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColors.swift; sourceTree = "<group>"; };
 		CBE1AABF235ADA9D00AEA9F9 /* Library.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Library.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBF894722396A52200FEC547 /* R+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "R+Image.swift"; sourceTree = "<group>"; };
+		CBF894742396A58000FEC547 /* R+Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "R+Storyboard.swift"; sourceTree = "<group>"; };
+		CBF894762396A74900FEC547 /* SettingsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
+		CBF894772396A75F00FEC547 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ClockViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,8 @@
 				CBE1A9D0235AA61100AEA9F9 /* R.swift */,
 				CBE1A9D2235AA61A00AEA9F9 /* Extension.swift */,
 				CBE1AABB235AD9AF00AEA9F9 /* ThemeColors.swift */,
+				CBF894712396A51700FEC547 /* Image */,
+				CBF894702396A4F700FEC547 /* Storyboard */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -116,6 +126,24 @@
 				CBE1AA08235AA73000AEA9F9 /* Info.plist */,
 			);
 			path = ResourcesTests;
+			sourceTree = "<group>";
+		};
+		CBF894702396A4F700FEC547 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				CBF894742396A58000FEC547 /* R+Storyboard.swift */,
+				CBF894762396A74900FEC547 /* SettingsViewController.storyboard */,
+				CBF894782396A75F00FEC547 /* ClockViewController.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		CBF894712396A51700FEC547 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				CBF894722396A52200FEC547 /* R+Image.swift */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +239,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBF894792396A76800FEC547 /* ClockViewController.storyboard in Resources */,
+				CBF8947A2396A77000FEC547 /* SettingsViewController.storyboard in Resources */,
 				CBE1A9CE235AA5E100AEA9F9 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,8 +259,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBF894732396A52200FEC547 /* R+Image.swift in Sources */,
 				CBE1A9D1235AA61100AEA9F9 /* R.swift in Sources */,
 				CBE1A9D3235AA61A00AEA9F9 /* Extension.swift in Sources */,
+				CBF894752396A58000FEC547 /* R+Storyboard.swift in Sources */,
 				CBE1AABC235AD9AF00AEA9F9 /* ThemeColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,6 +284,17 @@
 			targetProxy = CBE1AA0A235AA73000AEA9F9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CBF894782396A75F00FEC547 /* ClockViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBF894772396A75F00FEC547 /* Base */,
+			);
+			name = ClockViewController.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CBE1A9C8235AA5AE00AEA9F9 /* Debug */ = {

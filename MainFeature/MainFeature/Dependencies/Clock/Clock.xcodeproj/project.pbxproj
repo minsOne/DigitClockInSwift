@@ -45,7 +45,6 @@
 		CBD379072388F3BD006B0EBD /* Clock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Clock.h; sourceTree = "<group>"; };
 		CBD379082388F3BD006B0EBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBD379222388F454006B0EBD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CBD379252388F458006B0EBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ClockViewController.storyboard; sourceTree = "<group>"; };
 		CBD379262388F458006B0EBD /* ColorStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorStorageService.swift; sourceTree = "<group>"; };
 		CBD3792B2388F4BC006B0EBD /* Settings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Settings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD383BF23924D74004EEAB4 /* ClockTimer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ClockTimer.xcodeproj; path = ClockTimer/ClockTimer.xcodeproj; sourceTree = "<group>"; };
@@ -100,7 +99,6 @@
 				CBAE5801239289ED004DE131 /* Builder.swift */,
 				CBAE5802239289ED004DE131 /* Interactor.swift */,
 				CBD379222388F454006B0EBD /* ViewController.swift */,
-				CBD379242388F458006B0EBD /* ClockViewController.storyboard */,
 				CBF894512393D37700FEC547 /* TimerService.swift */,
 				CBD379262388F458006B0EBD /* ColorStorageService.swift */,
 			);
@@ -247,17 +245,6 @@
 			targetProxy = CBD383C523924D99004EEAB4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		CBD379242388F458006B0EBD /* ClockViewController.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CBD379252388F458006B0EBD /* Base */,
-			);
-			name = ClockViewController.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CBD3790A2388F3BD006B0EBD /* Debug */ = {

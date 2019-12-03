@@ -10,13 +10,13 @@
         <!--Root View Controller-->
         <scene sceneID="uqy-VY-2k4">
             <objects>
-                <tableViewController storyboardIdentifier="ViewController" clearsSelectionOnViewWillAppear="NO" id="EIs-Aq-4th" customClass="ViewController" customModule="Settings" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SettingsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" clearsSelectionOnViewWillAppear="NO" id="EIs-Aq-4th" customClass="ViewController" customModule="Settings" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="80" sectionHeaderHeight="10" sectionFooterHeight="10" id="FwV-qN-S2y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ThemeCellId" rowHeight="80" id="TbJ-Br-elJ" userLabel="ThemeCell" customClass="SettingThemeTableViewCell" customModule="Settings" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ThemeCellId" rowHeight="80" id="TbJ-Br-elJ" userLabel="ThemeCell" customClass="SettingThemeTableViewCell" customModule="Settings">
                                 <rect key="frame" x="0.0" y="55.5" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TbJ-Br-elJ" id="dfd-mN-S1x">
@@ -128,7 +128,7 @@
                                     <outletCollection property="themeButtons" destination="ebs-rD-yRE" collectionClass="NSMutableArray" id="Cuh-Gd-56j"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="MakerCellId" selectionStyle="default" indentationWidth="10" reuseIdentifier="MakerCellId" rowHeight="80" id="J9K-TO-CHk" userLabel="MakerCell" customClass="SettingMakerTableViewCell" customModule="Settings" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="MakerCellId" selectionStyle="default" indentationWidth="10" reuseIdentifier="MakerCellId" rowHeight="80" id="J9K-TO-CHk" userLabel="MakerCell" customClass="SettingMakerTableViewCell" customModule="Settings">
                                 <rect key="frame" x="0.0" y="135.5" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J9K-TO-CHk" id="cH1-M4-nIN">
@@ -153,7 +153,7 @@
                                     <outlet property="makerLabel" destination="3E7-hz-N2L" id="d0t-R6-nXJ"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="VersionCellId" selectionStyle="default" indentationWidth="10" reuseIdentifier="VersionCellId" rowHeight="80" id="Q0r-Pj-9TU" userLabel="VersionCell" customClass="SettingVersionTableViewCell" customModule="Settings" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="VersionCellId" selectionStyle="default" indentationWidth="10" reuseIdentifier="VersionCellId" rowHeight="80" id="Q0r-Pj-9TU" userLabel="VersionCell" customClass="SettingVersionTableViewCell" customModule="Settings">
                                 <rect key="frame" x="0.0" y="215.5" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q0r-Pj-9TU" id="Lh1-49-ha2">

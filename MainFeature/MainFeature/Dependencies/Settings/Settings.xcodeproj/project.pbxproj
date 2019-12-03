@@ -14,7 +14,6 @@
 		CBD378DF2388F359006B0EBD /* Settings.h in Headers */ = {isa = PBXBuildFile; fileRef = CBD378DD2388F359006B0EBD /* Settings.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBD378F22388F383006B0EBD /* SettingMakerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD378EC2388F383006B0EBD /* SettingMakerTableViewCell.swift */; };
 		CBD378F32388F383006B0EBD /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD378ED2388F383006B0EBD /* SettingTableViewCell.swift */; };
-		CBD378F42388F383006B0EBD /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBD378EE2388F383006B0EBD /* SettingsViewController.storyboard */; };
 		CBD378F52388F383006B0EBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD378EF2388F383006B0EBD /* ViewController.swift */; };
 		CBD378F62388F383006B0EBD /* SettingThemeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD378F02388F383006B0EBD /* SettingThemeTableViewCell.swift */; };
 		CBD378F72388F383006B0EBD /* SettingVersionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD378F12388F383006B0EBD /* SettingVersionTableViewCell.swift */; };
@@ -32,7 +31,6 @@
 		CBD378DE2388F359006B0EBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBD378EC2388F383006B0EBD /* SettingMakerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingMakerTableViewCell.swift; sourceTree = "<group>"; };
 		CBD378ED2388F383006B0EBD /* SettingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
-		CBD378EE2388F383006B0EBD /* SettingsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
 		CBD378EF2388F383006B0EBD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CBD378F02388F383006B0EBD /* SettingThemeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingThemeTableViewCell.swift; sourceTree = "<group>"; };
 		CBD378F12388F383006B0EBD /* SettingVersionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingVersionTableViewCell.swift; sourceTree = "<group>"; };
@@ -105,7 +103,6 @@
 				CBAE57E0239283A3004DE131 /* Router.swift */,
 				CBAE57E2239283A3004DE131 /* Builder.swift */,
 				CBAE57E3239283A3004DE131 /* Interactor.swift */,
-				CBD378EE2388F383006B0EBD /* SettingsViewController.storyboard */,
 				CBAE57DC23928307004DE131 /* Cell */,
 			);
 			path = Sources;
@@ -180,7 +177,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBD378F42388F383006B0EBD /* SettingsViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

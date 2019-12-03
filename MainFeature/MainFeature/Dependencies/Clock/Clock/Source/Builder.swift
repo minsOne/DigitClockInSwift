@@ -8,6 +8,7 @@
 
 import RIBs
 import Settings
+import Resources
 
 public protocol Dependency: RIBs.Dependency {}
 
@@ -36,7 +37,7 @@ public final class Builder: RIBs.Builder<Dependency>, Buildable {
     public func build(colorStorageSerive service: ColorStorageService) -> LaunchRouting {
         let component = Component(colorStorageSerive: service,
                                   dependency: dependency)
-        let viewController = ViewController.instance
+        let viewController: ViewController = R.Storyboard.clock.viewController()
         viewController.colorStorageService = service
         let interactor = Interactor(presenter: viewController)
         
