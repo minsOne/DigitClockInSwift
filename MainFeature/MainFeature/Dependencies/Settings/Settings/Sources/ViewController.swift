@@ -109,7 +109,7 @@ final public class ViewController: UITableViewController, SettingTableViewCellPr
     func selectedBackground(theme: UIColor) {
         listener?.update(color: theme)
 
-        if !UIDevice.current.model.hasPrefix("iPad") {
+        if !UIDevice.isIPad {
             listener?.done()
         }
     }

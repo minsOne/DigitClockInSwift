@@ -15,6 +15,7 @@
 		CBD379232388F454006B0EBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD379222388F454006B0EBD /* ViewController.swift */; };
 		CBD379272388F458006B0EBD /* ColorStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD379262388F458006B0EBD /* ColorStorageService.swift */; };
 		CBD3792C2388F4BC006B0EBD /* Settings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD3792B2388F4BC006B0EBD /* Settings.framework */; };
+		CBF894522393D37700FEC547 /* TimerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF894512393D37700FEC547 /* TimerService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		CBD379262388F458006B0EBD /* ColorStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorStorageService.swift; sourceTree = "<group>"; };
 		CBD3792B2388F4BC006B0EBD /* Settings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Settings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD383BF23924D74004EEAB4 /* ClockTimer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ClockTimer.xcodeproj; path = ClockTimer/ClockTimer.xcodeproj; sourceTree = "<group>"; };
+		CBF894512393D37700FEC547 /* TimerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				CBAE5802239289ED004DE131 /* Interactor.swift */,
 				CBD379222388F454006B0EBD /* ViewController.swift */,
 				CBD379242388F458006B0EBD /* ClockViewController.storyboard */,
+				CBF894512393D37700FEC547 /* TimerService.swift */,
 				CBD379262388F458006B0EBD /* ColorStorageService.swift */,
 			);
 			path = Source;
@@ -229,6 +232,7 @@
 				CBD379232388F454006B0EBD /* ViewController.swift in Sources */,
 				CBAE5804239289EE004DE131 /* Router.swift in Sources */,
 				CBAE5805239289EE004DE131 /* Interactor.swift in Sources */,
+				CBF894522393D37700FEC547 /* TimerService.swift in Sources */,
 				CBD379272388F458006B0EBD /* ColorStorageService.swift in Sources */,
 				CBAE5806239289EE004DE131 /* Builder.swift in Sources */,
 			);

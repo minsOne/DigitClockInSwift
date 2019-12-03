@@ -17,6 +17,7 @@ private let spaceViewAlpha: CGFloat = 0.5
 
 public enum PresentableListenerAction {
     case tappedSettingButton
+    case viewDidLoad
 }
 
 public protocol PresentableListener: class {
@@ -233,7 +234,7 @@ extension ViewController {
     @objc func handleSingleTap(recognizer: UITapGestureRecognizer) {
         isTouch.toggle()
         
-        if isIPad {
+        if UIDevice.isIPad {
             isTouch ? onSpaceViewTimer() : offSpaceViewTimer()
         }
     }
@@ -335,12 +336,4 @@ private func getTimeList(hour h: Int, minute m: Int, second s: Int) -> [Int] {
 
 private func asyncUI(f: @escaping () -> Void) {
     DispatchQueue.main.async(execute: f)
-}
-
-private func asyncLogic(f: @escaping () -> Void) {
-    DispatchQueue.global().async(execute: f)
-}
-
-private var isIPad: Bool {
-    return UIDevice.current.model.hasPrefix("iPad")
 }

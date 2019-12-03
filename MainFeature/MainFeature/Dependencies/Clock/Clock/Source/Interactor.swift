@@ -48,8 +48,12 @@ public final class Interactor: RIBs.PresentableInteractor<Presentable>, Interact
     
     public func action(action: PresentableListenerAction) {
         switch action {
-        case .tappedSettingButton:
-            router?.routeToSettings()
+        case .tappedSettingButton: router?.routeToSettings()
+        case .viewDidLoad: viewDidLoad()
         }
+    }
+    
+    func viewDidLoad() {
+        
     }
 }

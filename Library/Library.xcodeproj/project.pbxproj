@@ -13,6 +13,7 @@
 		CBE1AA3C235AB32800AEA9F9 /* ClockDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1AA3B235AB32800AEA9F9 /* ClockDate.swift */; };
 		CBE1AABE235ADA2E00AEA9F9 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1AABD235ADA2D00AEA9F9 /* UIColorExtension.swift */; };
 		CBE1AAC6235AE02E00AEA9F9 /* Instantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1AAC5235AE02E00AEA9F9 /* Instantiable.swift */; };
+		CBF894502393CE0600FEC547 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF8944F2393CE0600FEC547 /* UIDevice+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		CBE1AA3B235AB32800AEA9F9 /* ClockDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockDate.swift; sourceTree = "<group>"; };
 		CBE1AABD235ADA2D00AEA9F9 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		CBE1AAC5235AE02E00AEA9F9 /* Instantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instantiable.swift; sourceTree = "<group>"; };
+		CBF8944F2393CE0600FEC547 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				CBE1AA3B235AB32800AEA9F9 /* ClockDate.swift */,
 				CBE1AABD235ADA2D00AEA9F9 /* UIColorExtension.swift */,
 				CBE1AAC5235AE02E00AEA9F9 /* Instantiable.swift */,
+				CBF8944F2393CE0600FEC547 /* UIDevice+Extension.swift */,
 				CBE1AA24235AB31C00AEA9F9 /* Library.h */,
 				CBE1AA25235AB31C00AEA9F9 /* Info.plist */,
 			);
@@ -215,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBE1AA3C235AB32800AEA9F9 /* ClockDate.swift in Sources */,
+				CBF894502393CE0600FEC547 /* UIDevice+Extension.swift in Sources */,
 				CBE1AAC6235AE02E00AEA9F9 /* Instantiable.swift in Sources */,
 				CBE1AABE235ADA2E00AEA9F9 /* UIColorExtension.swift in Sources */,
 			);
