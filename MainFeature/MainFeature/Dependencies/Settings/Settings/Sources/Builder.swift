@@ -33,7 +33,7 @@ public final class Builder: RIBs.Builder<Dependency>, Buildable {
 
     public func build(withListener listener: Listener) -> Routing {
         let component = Component(dependency: dependency)
-        let viewController: ViewController = R.Storyboard.settings.viewController()
+        let viewController: ViewController = R.Storyboard.settings.instance()
         let interactor = Interactor(presenter: viewController)
         interactor.listener = listener
         return Router(interactor: interactor, viewController: viewController)

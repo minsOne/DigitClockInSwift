@@ -11,17 +11,17 @@ import UIKit
 
 extension R {
     public enum Image {
-        public static let theme1: UIImage = .load(name: "theme1")
-        public static let theme2: UIImage = .load(name: "theme2")
-        public static let theme3: UIImage = .load(name: "theme3")
-        public static let theme4: UIImage = .load(name: "theme4")
-        public static let theme5: UIImage = .load(name: "theme5")
-        public static let theme6: UIImage = .load(name: "theme6")
-        public static let theme7: UIImage = .load(name: "theme7")
-        public static let theme8: UIImage = .load(name: "theme8")
-        public static let digits: UIImage = .load(name: "Digits")
-        public static let rotationLock: UIImage = .load(name: "rotation_lock")
-        public static let rotationUnLock: UIImage = .load(name: "rotation_unlock")
-        public static let menuSettingsBt: UIImage = .load(name: "menu_settings_bt")
+        public static var theme1: UIImage { UIImage.load(name: "theme1") }
+        public static var theme2: UIImage { UIImage.load(name: "theme2") }
+        public static var theme3: UIImage { UIImage.load(name: "theme3") }
+        public static var theme4: UIImage { UIImage.load(name: "theme4") }
+        public static var theme5: UIImage { UIImage.load(name: "theme5") }
+        public static var theme6: UIImage { UIImage.load(name: "theme6") }
+        public static var theme7: UIImage { UIImage.load(name: "theme7") }
+        public static var theme8: UIImage { UIImage.load(name: "theme8") }
+        public static var digits: UIImage { UIImage.load(name: "Digits") }
+        public static var rotationLock: UIImage { UIImage.load(name: "rotation_lock") }
+        public static var rotationUnLock: UIImage { UIImage.load(name: "rotation_unlock") }
+        public static var menuSettingsBt: UIImage { UIImage.load(name: "menu_settings_bt") }
     }
 }

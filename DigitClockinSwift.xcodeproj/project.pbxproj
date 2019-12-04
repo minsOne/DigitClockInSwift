@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CB619104235B53FC00E18C55 /* MainFeature.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB619103235B53FC00E18C55 /* MainFeature.framework */; };
-		CB619105235B53FC00E18C55 /* MainFeature.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB619103235B53FC00E18C55 /* MainFeature.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB68BAE6233F525700B08DC9 /* Analytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB68BAE5233F525700B08DC9 /* Analytics.framework */; };
 		CB68BAE7233F525700B08DC9 /* Analytics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB68BAE5233F525700B08DC9 /* Analytics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB79CF3B1AF346E90019B9F5 /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB79CF3A1AF346E90019B9F5 /* ThemeColor.swift */; };
@@ -62,7 +61,6 @@
 				CBAE57D9239282FA004DE131 /* RIBs.framework in Embed Frameworks */,
 				CBAE57F223928592004DE131 /* RxRelay.framework in Embed Frameworks */,
 				CB68BAE7233F525700B08DC9 /* Analytics.framework in Embed Frameworks */,
-				CB619105235B53FC00E18C55 /* MainFeature.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;

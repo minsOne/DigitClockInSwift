@@ -37,7 +37,7 @@ public final class Builder: RIBs.Builder<Dependency>, Buildable {
     public func build(colorStorageSerive service: ColorStorageService) -> LaunchRouting {
         let component = Component(colorStorageSerive: service,
                                   dependency: dependency)
-        let viewController: ViewController = R.Storyboard.clock.viewController()
+        let viewController: ViewController = R.Storyboard.clock.instance()
         viewController.colorStorageService = service
         let interactor = Interactor(presenter: viewController)
         

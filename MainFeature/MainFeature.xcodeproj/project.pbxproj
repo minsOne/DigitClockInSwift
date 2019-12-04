@@ -17,11 +17,8 @@
 		CB619148235B5C5A00E18C55 /* Library.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB619145235B5C5A00E18C55 /* Library.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB619149235B5C5A00E18C55 /* Resources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB619146235B5C5A00E18C55 /* Resources.framework */; };
 		CB61914A235B5C5A00E18C55 /* Resources.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB619146235B5C5A00E18C55 /* Resources.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CBAE57FA23928674004DE131 /* RIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAE57F723928674004DE131 /* RIBs.framework */; };
-		CBFADB38235BFC4500F01E39 /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBFADB37235BFC4500F01E39 /* SettingsViewController.storyboard */; };
 		CBFADB39235BFD5A00F01E39 /* MainFeature.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6190F8235B53C500E18C55 /* MainFeature.framework */; };
 		CBFADB3A235BFD5A00F01E39 /* MainFeature.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB6190F8235B53C500E18C55 /* MainFeature.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CBFADB42235C00BA00F01E39 /* ClockViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBFADB40235C00AE00F01E39 /* ClockViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,8 +96,6 @@
 		CBD378E52388F359006B0EBD /* Settings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Settings.xcodeproj; path = Settings/Settings.xcodeproj; sourceTree = "<group>"; };
 		CBD3790F2388F3BD006B0EBD /* Clock.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Clock.xcodeproj; path = Clock/Clock.xcodeproj; sourceTree = "<group>"; };
 		CBD3792F2388FC50006B0EBD /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
-		CBFADB37235BFC4500F01E39 /* SettingsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
-		CBFADB41235C00AE00F01E39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ClockViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +103,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBAE57FA23928674004DE131 /* RIBs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +146,6 @@
 				CB6190FC235B53C500E18C55 /* Info.plist */,
 				CB61910E235B54F300E18C55 /* MainFeature.swift */,
 				CBD3792F2388FC50006B0EBD /* module.modulemap */,
-				CBFADB36235BFC3A00F01E39 /* Source */,
 			);
 			path = MainFeature;
 			sourceTree = "<group>";
@@ -214,15 +207,6 @@
 				CBD379142388F3BE006B0EBD /* Clock.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		CBFADB36235BFC3A00F01E39 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				CBFADB40235C00AE00F01E39 /* ClockViewController.storyboard */,
-				CBFADB37235BFC4500F01E39 /* SettingsViewController.storyboard */,
-			);
-			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,8 +333,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBFADB38235BFC4500F01E39 /* SettingsViewController.storyboard in Resources */,
-				CBFADB42235C00BA00F01E39 /* ClockViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,14 +392,6 @@
 				CB619131235B581700E18C55 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		CBFADB40235C00AE00F01E39 /* ClockViewController.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CBFADB41235C00AE00F01E39 /* Base */,
-			);
-			name = ClockViewController.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -564,7 +538,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = mh_dylib;
+				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = MainFeature/module.modulemap;
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = kr.minsOne.DigitClock.MainFeature;
@@ -598,7 +572,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = mh_dylib;
+				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = MainFeature/module.modulemap;
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = kr.minsOne.DigitClock.MainFeature;

@@ -17,6 +17,7 @@
 		CBD378F52388F383006B0EBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD378EF2388F383006B0EBD /* ViewController.swift */; };
 		CBD378F62388F383006B0EBD /* SettingThemeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD378F02388F383006B0EBD /* SettingThemeTableViewCell.swift */; };
 		CBD378F72388F383006B0EBD /* SettingVersionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD378F12388F383006B0EBD /* SettingVersionTableViewCell.swift */; };
+		CBF894822397DD7E00FEC547 /* Resources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBF894812397DD7E00FEC547 /* Resources.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		CBD378EF2388F383006B0EBD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CBD378F02388F383006B0EBD /* SettingThemeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingThemeTableViewCell.swift; sourceTree = "<group>"; };
 		CBD378F12388F383006B0EBD /* SettingVersionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingVersionTableViewCell.swift; sourceTree = "<group>"; };
+		CBF894812397DD7E00FEC547 /* Resources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Resources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBF894822397DD7E00FEC547 /* Resources.framework in Frameworks */,
 				CBAE57ED239283ED004DE131 /* RIBs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,6 +65,7 @@
 		CBAE57E8239283ED004DE131 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CBF894812397DD7E00FEC547 /* Resources.framework */,
 				CBAE57F3239285BF004DE131 /* RxRelay.framework */,
 				CBAE57EA239283ED004DE131 /* RIBs.framework */,
 				CBAE57E9239283ED004DE131 /* RxSwift.framework */,
