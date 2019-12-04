@@ -84,7 +84,6 @@ extension ViewController {
         initTimeView()
         initColonView()
         initRotationBtn()
-        initSettingBtn()
         initSpaceView()
         onTickTimer()
         addTapGesture()
@@ -125,10 +124,6 @@ extension ViewController {
         rotationButton.addTarget(self,
                                  action: #selector(pressedRotationBtn),
                                  for: .touchUpInside)
-    }
-    
-    func initSettingBtn() {
-        settingButton.setImage(R.Image.menuSettingsBt, for: .normal)
     }
     
     func addTapGesture() {

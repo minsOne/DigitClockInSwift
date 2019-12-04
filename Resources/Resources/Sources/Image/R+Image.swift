@@ -22,6 +22,5 @@ extension R {
         public static var digits: UIImage { UIImage.load(name: "Digits") }
         public static var rotationLock: UIImage { UIImage.load(name: "rotation_lock") }
         public static var rotationUnLock: UIImage { UIImage.load(name: "rotation_unlock") }
-        public static var menuSettingsBt: UIImage { UIImage.load(name: "menu_settings_bt") }
     }
 }

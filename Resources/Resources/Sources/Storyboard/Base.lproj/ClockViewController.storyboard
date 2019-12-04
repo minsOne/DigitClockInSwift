@@ -414,7 +414,7 @@
                                             <constraint firstAttribute="height" constant="44" id="4Tg-He-Sg8"/>
                                             <constraint firstAttribute="width" constant="44" id="RwP-zC-AKz"/>
                                         </constraints>
-                                        <state key="normal">
+                                        <state key="normal" image="menu_settings_bt">
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
@@ -544,4 +544,7 @@
             <point key="canvasLocation" x="393" y="411"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="menu_settings_bt" width="16" height="16"/>
+    </resources>
 </document>
