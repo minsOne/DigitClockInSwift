@@ -10,5 +10,5 @@ import Foundation
 import UIKit
 
 public class R {
-    static let bundle = Bundle.current
+    static let bundle = Bundle(for: R.self)
 }
