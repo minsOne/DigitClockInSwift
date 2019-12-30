@@ -9,21 +9,25 @@
 import Foundation
 import UIKit
 
-private class CurrentBundle {}
-
-extension Bundle {
-    static var current: Bundle {
-        return Bundle(for: CurrentBundle.self)
-    }
-}
-
 extension UIImage {
     static func load(name: String) -> UIImage {
-        if let image = UIImage(named: name, in: Bundle.current, compatibleWith: nil) {
+        if let image = UIImage(named: name, in: R.bundle, compatibleWith: nil) {
             return image
         } else {
             assert(false, "이미지 로드 실패")
             return UIImage()
         }
+    }
+    struct WrappedBundleImage: _ExpressibleByImageLiteral {
+        let image: UIImage?
+        let name: String
+
+        init(imageLiteralResourceName name: String) {
+            self.name = name
+            self.image = UIImage(named: name, in: R.bundle, compatibleWith: nil)
+        }
+    }
+    static func name(_ wrappedImage: WrappedBundleImage) -> UIImage {
+        return wrappedImage.image!
     }
 }
