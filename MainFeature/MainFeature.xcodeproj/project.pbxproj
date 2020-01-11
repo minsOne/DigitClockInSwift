@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB30DE2A23C9A195005D6E3B /* Clock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD379142388F3BE006B0EBD /* Clock.framework */; };
+		CB30DE2D23C9A19E005D6E3B /* Settings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD378EA2388F35A006B0EBD /* Settings.framework */; };
 		CB6190FD235B53C500E18C55 /* MainFeature.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6190FB235B53C500E18C55 /* MainFeature.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB61910F235B54F300E18C55 /* MainFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB61910E235B54F300E18C55 /* MainFeature.swift */; };
 		CB619126235B581400E18C55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB619125235B581400E18C55 /* AppDelegate.swift */; };
@@ -103,6 +105,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB30DE2A23C9A195005D6E3B /* Clock.framework in Frameworks */,
+				CB30DE2D23C9A19E005D6E3B /* Settings.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
