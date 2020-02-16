@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CB999AFE1AE78E6300CDB674"
-               BuildableName = "DigitClockinSwift.app"
-               BlueprintName = "DigitClockinSwift"
-               ReferencedContainer = "container:DigitClockinSwift.xcodeproj">
+               BuildableName = "App.app"
+               BlueprintName = "App"
+               ReferencedContainer = "container:App.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CB999B131AE78E6300CDB674"
-               BuildableName = "DigitClockinSwiftTests.xctest"
-               BlueprintName = "DigitClockinSwiftTests"
-               ReferencedContainer = "container:DigitClockinSwift.xcodeproj">
+               BuildableName = "AppTests.xctest"
+               BlueprintName = "AppTests"
+               ReferencedContainer = "container:App.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CB999AFE1AE78E6300CDB674"
-            BuildableName = "DigitClockinSwift.app"
-            BlueprintName = "DigitClockinSwift"
-            ReferencedContainer = "container:DigitClockinSwift.xcodeproj">
+            BuildableName = "App.app"
+            BlueprintName = "App"
+            ReferencedContainer = "container:App.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>
@@ -78,9 +78,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CB999AFE1AE78E6300CDB674"
-            BuildableName = "DigitClockinSwift.app"
-            BlueprintName = "DigitClockinSwift"
-            ReferencedContainer = "container:DigitClockinSwift.xcodeproj">
+            BuildableName = "App.app"
+            BlueprintName = "App"
+            ReferencedContainer = "container:App.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

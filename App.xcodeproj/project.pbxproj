@@ -71,12 +71,12 @@
 		CB619103235B53FC00E18C55 /* MainFeature.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MainFeature.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB68BAE5233F525700B08DC9 /* Analytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Analytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB79CF3A1AF346E90019B9F5 /* ThemeColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
-		CB999AFF1AE78E6300CDB674 /* DigitClockinSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigitClockinSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB999AFF1AE78E6300CDB674 /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB999B031AE78E6300CDB674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB999B041AE78E6300CDB674 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB999B0B1AE78E6300CDB674 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CB999B0E1AE78E6300CDB674 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		CB999B141AE78E6300CDB674 /* DigitClockinSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigitClockinSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB999B141AE78E6300CDB674 /* AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB999B191AE78E6300CDB674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB999B1A1AE78E6300CDB674 /* DigitClockinSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitClockinSwiftTests.swift; sourceTree = "<group>"; };
 		CBAE57D6239282FA004DE131 /* RIBs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RIBs.framework; path = Carthage/Build/iOS/RIBs.framework; sourceTree = SOURCE_ROOT; };
@@ -153,8 +153,8 @@
 		CB999B001AE78E6300CDB674 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CB999AFF1AE78E6300CDB674 /* DigitClockinSwift.app */,
-				CB999B141AE78E6300CDB674 /* DigitClockinSwiftTests.xctest */,
+				CB999AFF1AE78E6300CDB674 /* App.app */,
+				CB999B141AE78E6300CDB674 /* AppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -200,9 +200,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CB999AFE1AE78E6300CDB674 /* DigitClockinSwift */ = {
+		CB999AFE1AE78E6300CDB674 /* App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CB999B1E1AE78E6300CDB674 /* Build configuration list for PBXNativeTarget "DigitClockinSwift" */;
+			buildConfigurationList = CB999B1E1AE78E6300CDB674 /* Build configuration list for PBXNativeTarget "App" */;
 			buildPhases = (
 				CB999AFB1AE78E6300CDB674 /* Sources */,
 				CB999AFC1AE78E6300CDB674 /* Frameworks */,
@@ -215,14 +215,14 @@
 			);
 			dependencies = (
 			);
-			name = DigitClockinSwift;
+			name = App;
 			productName = DigitClockinSwift;
-			productReference = CB999AFF1AE78E6300CDB674 /* DigitClockinSwift.app */;
+			productReference = CB999AFF1AE78E6300CDB674 /* App.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CB999B131AE78E6300CDB674 /* DigitClockinSwiftTests */ = {
+		CB999B131AE78E6300CDB674 /* AppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CB999B211AE78E6300CDB674 /* Build configuration list for PBXNativeTarget "DigitClockinSwiftTests" */;
+			buildConfigurationList = CB999B211AE78E6300CDB674 /* Build configuration list for PBXNativeTarget "AppTests" */;
 			buildPhases = (
 				CB999B101AE78E6300CDB674 /* Sources */,
 				CB999B111AE78E6300CDB674 /* Frameworks */,
@@ -233,9 +233,9 @@
 			dependencies = (
 				CB999B161AE78E6300CDB674 /* PBXTargetDependency */,
 			);
-			name = DigitClockinSwiftTests;
+			name = AppTests;
 			productName = DigitClockinSwiftTests;
-			productReference = CB999B141AE78E6300CDB674 /* DigitClockinSwiftTests.xctest */;
+			productReference = CB999B141AE78E6300CDB674 /* AppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -259,7 +259,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CB999AFA1AE78E6300CDB674 /* Build configuration list for PBXProject "DigitClockinSwift" */;
+			buildConfigurationList = CB999AFA1AE78E6300CDB674 /* Build configuration list for PBXProject "App" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -272,8 +272,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CB999AFE1AE78E6300CDB674 /* DigitClockinSwift */,
-				CB999B131AE78E6300CDB674 /* DigitClockinSwiftTests */,
+				CB999AFE1AE78E6300CDB674 /* App */,
+				CB999B131AE78E6300CDB674 /* AppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -348,7 +348,7 @@
 /* Begin PBXTargetDependency section */
 		CB999B161AE78E6300CDB674 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CB999AFE1AE78E6300CDB674 /* DigitClockinSwift */;
+			target = CB999AFE1AE78E6300CDB674 /* App */;
 			targetProxy = CB999B151AE78E6300CDB674 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -548,7 +548,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.coupang.iOS.minsOne.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DigitClockinSwift.app/DigitClockinSwift";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/App.app/App";
 			};
 			name = Debug;
 		};
@@ -564,14 +564,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.coupang.iOS.minsOne.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DigitClockinSwift.app/DigitClockinSwift";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/App.app/App";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CB999AFA1AE78E6300CDB674 /* Build configuration list for PBXProject "DigitClockinSwift" */ = {
+		CB999AFA1AE78E6300CDB674 /* Build configuration list for PBXProject "App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CB999B1C1AE78E6300CDB674 /* Debug */,
@@ -580,7 +580,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CB999B1E1AE78E6300CDB674 /* Build configuration list for PBXNativeTarget "DigitClockinSwift" */ = {
+		CB999B1E1AE78E6300CDB674 /* Build configuration list for PBXNativeTarget "App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CB999B1F1AE78E6300CDB674 /* Debug */,
@@ -589,7 +589,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CB999B211AE78E6300CDB674 /* Build configuration list for PBXNativeTarget "DigitClockinSwiftTests" */ = {
+		CB999B211AE78E6300CDB674 /* Build configuration list for PBXNativeTarget "AppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CB999B221AE78E6300CDB674 /* Debug */,

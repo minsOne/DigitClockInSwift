@@ -18,6 +18,6 @@
       location = "group:Analytics/Analytics.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:DigitClockinSwift.xcodeproj">
+      location = "group:App.xcodeproj">
    </FileRef>
 </Workspace>
